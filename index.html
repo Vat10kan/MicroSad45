@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>МикроСад45 — живая микрозелень в боксах, Курган. 150 ₽ за бокс</title>
+<meta name="description" content="МикроСад45 — живая микрозелень в боксах. 12 культур. 150 ₽ за бокс. Доставка бесплатно от 3 боксов по всем районам Кургана. Заказ через Telegram или Max.">
+<meta name="theme-color" content="#0f3d24">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   1. ДИЗАЙН-ТОКЕНЫ
+   ========================================================= */
+*,*::before,*::after{box-sizing:border-box}
+
+:root{
+  --bg:#f4f9f1;
+  --bg-2:#e8f3e0;
+  --surface:#ffffff;
+  --surface-2:#eaf4ee;
+  --text:#0f1e16;
+  --muted:#54685c;
+  --brand:#126b36;
+  --brand-2:#2fbf6a;
+  --brand-3:#8fe06a;
+  --accent:#c6f24a;
+  --accent-2:#ffd45c;
+  --accent-3:#ff8fa8;
+  --accent-ink:#0f2a17;
+  --border:#d8e6d8;
+  --radius:20px;
+  --radius-sm:12px;
+  --radius-lg:32px;
+  --shadow:0 14px 40px rgba(15,60,32,.10);
+  --shadow-hover:0 24px 60px rgba(15,60,32,.18);
+  --max:1200px;
+  --pad:clamp(16px,4vw,40px);
+  --fs-base:17px;
+  --fs-h1:clamp(30px,5.2vw,64px);
+  --fs-h2:clamp(24px,3.4vw,42px);
+  --fs-h3:clamp(18px,2vw,24px);
+  --font:"Manrope","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --font-display:"Unbounded","Manrope",system-ui,sans-serif;
+  --trans:.28s cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+
+[data-theme="dark"]{
+  --bg:#0b1410;
+  --bg-2:#0f1c14;
+  --surface:#132018;
+  --surface-2:#1a2b20;
+  --text:#eaf5ee;
+  --muted:#a9bdaf;
+  --border:#26382c;
+  --brand:#5ad48b;
+  --brand-2:#7ee0a4;
+  --brand-3:#a8ec8f;
+  --accent:#c6f24a;
+  --accent-2:#ffd45c;
+  --accent-3:#ff8fa8;
+  --accent-ink:#0b1410;
+  --shadow:0 14px 40px rgba(0,0,0,.5);
+  --shadow-hover:0 24px 60px rgba(0,0,0,.7);
+  color-scheme:dark;
+}
+
+/* РЕЖИМ ДЛЯ СЛАБОВИДЯЩИХ */
+body.a11y{
+  --bg:#ffffff;--bg-2:#ffffff;--surface:#ffffff;--surface-2:#ffffff;
+  --text:#000000;--muted:#000000;--brand:#000000;--brand-2:#000000;--brand-3:#000000;
+  --border:#000000;--accent:#ffff00;--accent-2:#ffff00;--accent-3:#ffff00;--accent-ink:#000000;
+  --fs-base:20px;--fs-h1:44px;--fs-h2:34px;--fs-h3:24px;
+  --radius:6px;--radius-sm:6px;--radius-lg:6px;--shadow:none;--shadow-hover:none;--trans:0s;
+  color-scheme:light;
+}
+body.a11y *,body.a11y *::before,body.a11y *::after{
+  animation:none !important;transition:none !important;
+  background-image:none !important;box-shadow:none !important;text-shadow:none !important;
+  filter:none !important;transform:none !important;
+}
+body.a11y a{text-decoration:underline;text-underline-offset:3px}
+body.a11y .btn{background:#000 !important;color:#fff !important;border:2px solid #000 !important}
+body.a11y .btn--ghost{background:#fff !important;color:#000 !important;border:2px solid #000 !important}
+body.a11y .grid{grid-template-columns:1fr !important}
+body.a11y .card{border:2px solid #000 !important}
+body.a11y :focus-visible{outline:4px solid #000 !important;outline-offset:2px}
+body.a11y .blob,body.a11y .marquee,body.a11y .reveal{display:none !important}
+body.a11y .progress{display:none !important}
+
+/* =========================================================
+   2. БАЗА
+   ========================================================= */
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font);font-size:var(--fs-base);line-height:1.65;
+  background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{
+  font-family:var(--font-display);line-height:1.12;margin:0 0 .5em;
+  font-weight:800;letter-spacing:-.02em;
+}
+h1{font-size:var(--fs-h1)}
+h2{font-size:var(--fs-h2)}
+h3{font-size:var(--fs-h3)}
+p{margin:0 0 1em}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+ul,ol{margin:0 0 1em;padding-left:1.2em}
+li{margin:.25em 0}
+hr{border:none;border-top:1px solid var(--border);margin:32px 0}
+:focus-visible{outline:3px solid var(--brand-2);outline-offset:3px;border-radius:4px}
+
+.skip-link{
+  position:absolute;left:-9999px;top:0;z-index:999;
+  background:var(--brand);color:#fff;padding:14px 22px;border-radius:0 0 var(--radius-sm) 0;font-weight:700;
+}
+.skip-link:focus{left:0}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.section{padding:clamp(36px,7vw,96px) 0;position:relative}
+.section--alt{background:var(--surface-2)}
+.section__head{max-width:780px;margin-bottom:36px}
+.lead{font-size:1.08em;color:var(--muted)}
+.muted{color:var(--muted)}
+.small{font-size:.88em}
+.center{text-align:center}
+
+/* =========================================================
+   3. ПРОГРЕСС + МАРКИЗА
+   ========================================================= */
+.progress{
+  position:fixed;top:0;left:0;right:0;height:3px;z-index:200;
+  background:transparent;pointer-events:none;
+}
+.progress__bar{
+  height:100%;width:0;
+  background:linear-gradient(90deg,var(--brand-2),var(--brand-3),var(--accent));
+  transition:width .1s linear;
+}
+
+.marquee{
+  background:var(--brand);
+  color:#fff;overflow:hidden;white-space:nowrap;
+  padding:12px 0;font-weight:700;font-size:.9em;
+  position:relative;z-index:5;
+}
+.marquee__track{
+  display:inline-flex;gap:36px;padding-left:36px;
+  animation:marquee 32s linear infinite;
+}
+.marquee__track span{display:inline-flex;align-items:center;gap:10px;flex:0 0 auto}
+.marquee__track .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+@keyframes marquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+
+/* =========================================================
+   4. КОМПОНЕНТЫ
+   ========================================================= */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 24px;border-radius:999px;border:2px solid transparent;
+  background:var(--brand);color:#fff;font:inherit;font-weight:800;font-size:.98em;
+  cursor:pointer;text-decoration:none;position:relative;overflow:hidden;
+  transition:transform var(--trans),box-shadow var(--trans),background var(--trans);
+  box-shadow:0 6px 18px rgba(18,107,54,.28);
+}
+.btn::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.32) 50%,transparent 70%);
+  transform:translateX(-100%);transition:transform .55s ease;
+}
+.btn:hover{
+  text-decoration:none;transform:translateY(-3px) scale(1.02);
+  box-shadow:0 14px 30px rgba(18,107,54,.34);
+}
+.btn:hover::before{transform:translateX(100%)}
+.btn--ghost{
+  background:transparent;color:var(--text);border-color:var(--border);
+  box-shadow:none;
+}
+.btn--ghost:hover{background:var(--surface);border-color:var(--brand);color:var(--brand)}
+.btn--accent{background:var(--accent);color:var(--accent-ink);box-shadow:0 6px 18px rgba(198,242,74,.4)}
+.btn--sm{padding:10px 16px;font-size:.9em}
+.btn--block{width:100%}
+.btn--tg{
+  background:#229ED9;color:#fff;box-shadow:0 6px 18px rgba(34,158,217,.35);
+}
+.btn--tg:hover{background:#1c8dbf}
+.btn--max{
+  background:linear-gradient(120deg,#6E4AFF,#A06BFF);color:#fff;
+  box-shadow:0 6px 18px rgba(110,74,255,.35);
+}
+.btn--max:hover{background:linear-gradient(120deg,#5c3ce6,#8e57ff)}
+
+.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow);
+  transition:transform var(--trans),box-shadow var(--trans),border-color var(--trans);
+  position:relative;overflow:hidden;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-hover);
+  border-color:color-mix(in srgb,var(--brand) 30%,transparent);
+}
+
+/* Сетки */
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.grid--2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.grid--4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+/* Каталог */
+#homeCatalog, #catalogGrid {
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
+
+/* Мобильная адаптация сетки каталога */
+@media (max-width: 768px) {
+  #homeCatalog, #catalogGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .grid { gap: 16px; }
+  .section__head { margin-bottom: 24px; }
+}
+
+/* Фильтры (Вкусовой навигатор) */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0;
+  padding: 16px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+  font-size: .85em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--trans);
+}
+.filter-btn:hover {
+  border-color: var(--brand-2);
+  background: var(--surface);
+}
+.filter-btn.is-active {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+  box-shadow: 0 4px 12px rgba(18,107,54,.25);
+}
+
+/* Гид по сочетаниям */
+.pairing-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform var(--trans);
+}
+.pairing-card:hover {
+  transform: translateY(-4px);
+}
+.pairing-card h4 {
+  margin: 0;
+  font-size: 1.1em;
+  font-family: var(--font-display);
+  color: var(--brand);
+}
+.pairing-card p {
+  margin: 0;
+  font-size: .9em;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.badge{
+  display:inline-block;padding:6px 14px;border-radius:999px;
+  background:var(--surface-2);color:var(--brand);font-size:.82em;font-weight:800;
+  border:1px solid var(--border);transition:transform var(--trans);
+}
+.badge:hover{transform:translateY(-2px)}
+.kicker{
+  text-transform:uppercase;letter-spacing:.16em;font-size:.76em;font-weight:800;
+  color:var(--brand-2);margin-bottom:12px;
+}
+
+/* Шапка */
+.site-header{
+  position:sticky;top:0;z-index:60;
+  background:color-mix(in srgb,var(--surface) 88%,transparent);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow var(--trans);
+}
+.site-header.scrolled{box-shadow:0 8px 30px rgba(15,60,32,.08)}
+.header__bar{
+  display:flex;align-items:center;gap:18px;
+  padding:12px var(--pad);max-width:var(--max);margin:0 auto;flex-wrap:wrap;
+}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:800;font-size:1.1em;color:var(--text);text-decoration:none;letter-spacing:-.02em}
+.logo:hover{text-decoration:none}
+.logo__img{
+  width:40px;height:40px;border-radius:12px;object-fit:cover;display:block;
+  background:var(--brand);border:1px solid var(--border);flex:0 0 auto;
+  transition:transform var(--trans);
+}
+.logo:hover .logo__img{transform:rotate(-6deg) scale(1.05)}
+.site-nav{margin-left:auto}
+.site-nav ul{display:flex;gap:2px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.site-nav a{
+  display:block;padding:9px 13px;border-radius:999px;color:var(--text);
+  font-weight:700;font-size:.92em;transition:background var(--trans),color var(--trans);
+}
+.site-nav a:hover{background:var(--surface-2);text-decoration:none}
+.site-nav a[aria-current="page"]{background:var(--brand);color:#fff}
+
+.header__tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.icon-btn{
+  display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:999px;
+  border:1px solid var(--border);background:var(--surface);color:var(--text);
+  font:inherit;font-size:.86em;font-weight:800;cursor:pointer;
+  transition:background var(--trans),transform var(--trans);
+}
+.icon-btn:hover{background:var(--surface-2);transform:translateY(-1px)}
+.icon-btn[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.lang-switch{display:flex;border:1px solid var(--border);border-radius:999px;overflow:hidden}
+.lang-switch button{
+  border:none;background:transparent;color:var(--text);font:inherit;font-size:.86em;font-weight:800;
+  padding:9px 13px;cursor:pointer;transition:background var(--trans),color var(--trans);
+}
+.lang-switch button[aria-pressed="true"]{background:var(--brand);color:#fff}
+
+/* Адаптация шапки для мобильных */
+@media (max-width: 900px) {
+  .header__bar { gap: 10px; justify-content: space-between; }
+  .site-nav { 
+    margin-left: 0; width: 100%; order: 3; 
+    overflow-x: auto; padding-bottom: 4px; 
+    -ms-overflow-style: none; scrollbar-width: none;
+  }
+  .site-nav::-webkit-scrollbar { display: none; }
+  .site-nav ul { flex-wrap: nowrap; }
+  .site-nav a { white-space: nowrap; padding: 6px 10px; font-size: .9em; }
+  .header__tools { margin-left: auto; }
+  .logo span { font-size: .95em; }
+}
+
+/* Hero */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,var(--bg) 0%,var(--bg-2) 55%,var(--bg) 100%);
+  border-bottom:1px solid var(--border);
+}
+.hero__blob{
+  position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;
+  pointer-events:none;z-index:0;
+}
+.hero__blob--1{width:520px;height:520px;background:var(--brand-3);top:-140px;right:-120px;animation:float 14s ease-in-out infinite}
+.hero__blob--2{width:420px;height:420px;background:var(--accent);bottom:-160px;left:-100px;animation:float 18s ease-in-out infinite reverse}
+.hero__blob--3{width:280px;height:280px;background:var(--accent-3);top:40%;right:22%;opacity:.28;animation:float 12s ease-in-out infinite}
+@keyframes float{
+  0%,100%{transform:translate(0,0) scale(1)}
+  50%{transform:translate(30px,-30px) scale(1.08)}
+}
+.hero__inner{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:48px;align-items:center;padding:clamp(44px,7vw,96px) 0;
+}
+.hero h1{margin-bottom:.35em}
+.hero__sub{font-size:1.12em;color:var(--muted);max-width:56ch}
+.hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 16px}
+.hero__note{font-size:.92em;color:var(--muted)}
+.hero__art{
+  position:relative;aspect-ratio:1/1;max-width:520px;margin:0 auto;
+  border-radius:40px;
+  display:grid;place-items:center;
+  box-shadow:0 30px 80px rgba(18,107,54,.35),inset 0 0 0 1px rgba(255,255,255,.2);
+  overflow:hidden;
+  animation:breathe 6s ease-in-out infinite;
+}
+.hero__art img{
+  width:100%;height:100%;object-fit:cover;border-radius:inherit;
+}
+@keyframes breathe{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.015)}
+}
+
+/* Адаптация Hero для мобильных */
+@media (max-width: 900px) {
+  .hero__inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .hero__actions { justify-content: center; flex-direction: column; }
+  .hero__actions .btn { width: 100%; }
+  .hero__art { max-width: 280px; margin: 0 auto; border-radius: 24px; }
+  .hero__sub { margin: 0 auto; }
+  .stats { justify-content: center; gap: 12px; }
+  .stat { padding: 16px 12px; flex: 1 1 40%; }
+}
+
+/* Статистика */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:32px}
+.stat{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:20px 16px;text-align:center;position:relative;overflow:hidden;
+  transition:transform var(--trans),box-shadow var(--trans);
+}
+.stat:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.stat b{display:block;font-family:var(--font-display);font-size:1.9em;color:var(--brand);line-height:1.05;font-weight:800}
+.stat span{font-size:.86em;color:var(--muted);font-weight:600}
+
+/* Карточки товаров */
+.product{
+  display:flex;flex-direction:column;gap:14px;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:20px;
+  position:relative;overflow:hidden;
+  transition:transform var(--trans),box-shadow var(--trans);
+}
+.product::before{
+  content:"";position:absolute;inset:0;opacity:0;
+  background:radial-gradient(400px 200px at 50% -20%,var(--card-tint,var(--brand-3)),transparent 70%);
+  transition:opacity var(--trans);pointer-events:none;
+}
+.product:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover)}
+.product:hover::before{opacity:.45}
+.product[data-color="sunflower"]{--card-tint:#ffd45c}
+.product[data-color="pea"]{--card-tint:#a7e07a}
+.product[data-color="radish"]{--card-tint:#ff8fa8}
+.product[data-color="arugula"]{--card-tint:#4b9e57}
+.product[data-color="cress"]{--card-tint:#9cff8a}
+.product[data-color="lettuce"]{--card-tint:#c6f24a}
+.product[data-color="sorrel"]{--card-tint:#8fe06a}
+.product[data-color="basil"]{--card-tint:#3e8e4f}
+.product[data-color="cabbage"]{--card-tint:#a6e0d6}
+.product[data-color="mustard"]{--card-tint:#f2c74a}
+.product[data-color="parsley"]{--card-tint:#7ecf5f}
+.product[data-color="coriander"]{--card-tint:#5fbfb3}
+
+.product__ph{
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.product__ph img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform var(--trans);
+}
+.product:hover .product__ph img{transform:scale(1.05)}
+
+.product h3{margin:4px 0 0;font-size:1.2em;font-family:var(--font-display);font-weight:700}
+.product .desc{font-size:.95em;color:var(--muted);margin:0;line-height: 1.5;}
+.price-tag{
+  font-family:var(--font-display);
+  font-size:1.6em;font-weight:800;color:var(--brand);
+  margin-top:auto;padding-top:14px;border-top:1px dashed var(--border);
+  display:flex;align-items:baseline;gap:8px;
+}
+.product__actions{display:flex;gap:8px;flex-wrap:wrap;padding-top:10px}
+
+/* Мобильная адаптация карточек */
+@media (max-width: 768px) {
+  .product__actions { flex-direction: column; }
+  .product__actions .btn { width: 100%; }
+  .product { padding: 16px; }
+}
+
+/* Тарифы */
+.tier{
+  display:flex;flex-direction:column;gap:8px;height:100%;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:26px;position:relative;overflow:hidden;transition:transform var(--trans),box-shadow var(--trans);
+}
+.tier:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
+.tier__qty{font-size:.92em;color:var(--muted);font-weight:800}
+.tier__price{font-family:var(--font-display);font-size:2.2em;font-weight:800;color:var(--brand);line-height:1.05}
+.tier__price small{font-family:var(--font);font-size:.4em;font-weight:700;color:var(--muted)}
+.tier--best{
+  border:2px solid var(--brand);
+  background:linear-gradient(160deg,var(--surface),color-mix(in srgb,var(--accent) 22%,var(--surface)));
+}
+
+/* Таблицы */
+.table-wrap{
+  overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius);
+  background:var(--surface);box-shadow:var(--shadow);
+  -webkit-overflow-scrolling: touch;
+}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:.93em}
+caption{text-align:left;padding:16px 20px;font-weight:800;color:var(--muted);font-size:.9em}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--surface-2);font-weight:800}
+tbody tr{transition:background var(--trans)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--surface-2)}
+
+/* Блог / рецепты / FAQ */
+.recipe__ph,.post__ph{
+  aspect-ratio:16/9;border-radius:var(--radius-sm);
+  display:grid;place-items:center;font-size:56px;margin-bottom:14px;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,.5), transparent 60%),
+    linear-gradient(140deg,var(--brand-3),var(--brand-2));
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.3),inset 0 -20px 40px rgba(0,0,0,.08);
+  transition:transform var(--trans);
+}
+.card:hover .recipe__ph,.card:hover .post__ph{transform:scale(1.02) rotate(-1deg)}
+.meta{display:flex;gap:14px;flex-wrap:wrap;font-size:.84em;color:var(--muted);margin-bottom:10px;font-weight:600}
+.post p.lead{font-size:1em}
+.post ul.points{font-size:.92em;margin:10px 0}
+.post .keys{font-size:.82em;color:var(--muted);border-top:1px dashed var(--border);padding-top:10px;margin-top:12px}
+details{
+  border:1px solid var(--border);border-radius:var(--radius-sm);
+  background:var(--surface);padding:0;margin-bottom:12px;
+  transition:border-color var(--trans),box-shadow var(--trans);
+}
+details:hover{border-color:color-mix(in srgb,var(--brand) 40%,transparent)}
+details[open]{box-shadow:var(--shadow)}
+details summary{
+  cursor:pointer;padding:16px 20px;font-weight:700;list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+  font-size:1.02em;
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{
+  content:"+";font-size:1.4em;color:var(--brand);font-weight:800;
+  transition:transform var(--trans);
+}
+details[open] summary::after{transform:rotate(45deg)}
+details .details__body{padding:0 20px 18px;color:var(--muted)}
+
+/* Подвал */
+.site-footer{
+  background:linear-gradient(180deg,var(--surface) 0%,color-mix(in srgb,var(--brand) 8%,var(--surface)) 100%);
+  border-top:1px solid var(--border);padding:56px 0 32px;margin-top:20px;
+  position:relative;
+}
+.footer__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px}
+.site-footer h4{
+  font-size:.95em;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px;
+  font-family:var(--font);font-weight:800;
+}
+.site-footer ul{list-style:none;padding:0;margin:0}
+.site-footer li{margin:.4em 0}
+
+/* Адаптация подвала */
+@media (max-width: 600px) {
+  .footer__grid { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+  .site-footer .logo { justify-content: center; }
+}
+
+/* Страницы */
+.page{display:none}
+.page.is-active{display:block;animation:pageIn .35s ease both}
+@keyframes pageIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* Чат-бот */
+.chat{position:fixed;right:16px;bottom:16px;z-index:80;font-size:15px;width:min(380px,calc(100vw - 32px))}
+.chat__toggle{
+  display:flex;align-items:center;gap:10px;margin-left:auto;
+  padding:14px 20px;border-radius:999px;border:none;cursor:pointer;
+  background:linear-gradient(120deg,var(--brand),var(--brand-2));color:#fff;
+  font:inherit;font-weight:800;font-family:var(--font-display);
+  box-shadow:0 14px 34px rgba(18,107,54,.4);
+  transition:transform var(--trans),box-shadow var(--trans);
+}
+.chat__toggle:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 18px 44px rgba(18,107,54,.5)}
+.chat__panel{
+  display:none;margin-top:12px;background:var(--surface);
+  border:1px solid var(--border);border-radius:22px;overflow:hidden;
+  box-shadow:0 26px 60px rgba(15,60,32,.3);
+}
+.chat__panel.is-open{display:block;animation:chatIn .28s cubic-bezier(.2,.7,.2,1) both}
+@keyframes chatIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+.chat__head{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:16px 18px;background:linear-gradient(120deg,var(--brand),var(--brand-2));color:#fff;
+  font-weight:800;font-family:var(--font-display);
+}
+.chat__head button{background:transparent;border:none;color:#fff;font-size:1.2em;cursor:pointer;line-height:1;transition:transform var(--trans)}
+.chat__head button:hover{transform:rotate(90deg)}
+.chat__log{
+  height:250px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--bg);
+}
+.msg{
+  max-width:88%;padding:10px 14px;border-radius:16px;font-size:.93em;line-height:1.5;white-space:pre-line;
+  animation:msgIn .28s cubic-bezier(.2,.7,.2,1) both;
+}
+@keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.msg--bot{background:var(--surface);border:1px solid var(--border);border-bottom-left-radius:4px;box-shadow:0 4px 12px rgba(15,60,32,.06)}
+.msg--user{background:linear-gradient(120deg,var(--brand),var(--brand-2));color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.msg--typing{color:var(--muted);font-style:italic;display:inline-flex;align-items:center;gap:3px}
+.msg--typing::after{
+  content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:currentColor;
+  animation:dotPulse 1s infinite;
+}
+@keyframes dotPulse{0%,100%{opacity:.3}50%{opacity:1}}
+.chat__topics{
+  display:flex;flex-wrap:wrap;gap:6px;padding:12px 16px 0;background:var(--surface);
+  max-height:120px;overflow-y:auto;
+}
+.chat__topics button{
+  border:1px solid var(--border);background:var(--surface-2);color:var(--text);
+  border-radius:999px;padding:8px 13px;font:inherit;font-size:.8em;font-weight:700;cursor:pointer;
+  transition:all var(--trans);
+}
+.chat__topics button:hover{border-color:var(--brand);background:var(--brand);color:#fff;transform:translateY(-1px)}
+.chat__input{display:flex;gap:8px;padding:12px 16px 0;background:var(--surface)}
+.chat__input input{
+  flex:1;padding:11px 16px;border-radius:999px;border:1px solid var(--border);
+  background:var(--bg);color:var(--text);font:inherit;font-size:.92em;min-width:0;
+  transition:border-color var(--trans),box-shadow var(--trans);
+}
+.chat__input input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 20%,transparent)}
+.chat__foot{padding:12px 16px 16px;background:var(--surface)}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-visible{opacity:1;transform:none}
+
+/* Утилиты */
+.breadcrumbs{font-size:.85em;color:var(--muted);margin-bottom:14px}
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap;border:0;
+}
+.alert{
+  border-left:4px solid var(--brand);background:var(--surface-2);
+  padding:16px 20px;border-radius:var(--radius-sm);margin:18px 0;
+  position:relative;
+}
+.notice-ok{border-left-color:#2fbf6a;background:color-mix(in srgb,var(--brand-2) 10%,var(--surface))}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+<div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+<a class="skip-link" href="#main">Перейти к основному содержимому / Skip to content</a>
+
+<!-- ================= ШАПКА ================= -->
+<header class="site-header" role="banner" id="siteHeader">
+  <div class="header__bar">
+    <a class="logo" href="#/home" aria-label="МикроСад45 — на главную">
+      <img class="logo__img" src="img/i.png" alt="" width="40" height="40">
+      <span>МикроСад45</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="#/catalog" data-i18n="nav.catalog">Каталог</a></li>
+        <li><a href="#/wholesale" data-i18n="nav.wholesale">Опт</a></li>
+        <li><a href="#/storage" data-i18n="nav.storage">Уход</a></li>
+        <li><a href="#/recipes" data-i18n="nav.recipes">Рецепты</a></li>
+        <li><a href="#/blog" data-i18n="nav.blog">Блог</a></li>
+        <li><a href="#/faq" data-i18n="nav.faq">FAQ</a></li>
+        <li><a href="#/contacts" data-i18n="nav.contacts">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__tools">
+      <div class="lang-switch" role="group" aria-label="Переключатель языка / Language switcher">
+        <button type="button" data-lang-btn="ru" aria-pressed="true" lang="ru">RU</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+
+      <button type="button" class="icon-btn" id="a11yToggle" aria-pressed="false"
+              aria-label="Версия для слабовидящих">
+        <span aria-hidden="true">👁</span>
+        <span data-i18n="header.a11y">Для слабовидящих</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- БЕГУЩАЯ СТРОКА -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marqueeTrack"></div>
+</div>
+
+<main id="main" role="main" tabindex="-1">
+
+  <!-- ============================================================
+       ГЛАВНАЯ
+       ============================================================ -->
+  <div class="page is-active" id="page-home">
+
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+      <div class="hero__blob hero__blob--3"></div>
+      <div class="wrap hero__inner">
+        <div>
+          <p class="kicker" data-i18n="home.hero.kicker">Курган · живая микрозелень в боксах</p>
+          <h1 id="heroTitle" data-i18n="home.hero.title">Живая микрозелень в боксе — 150 ₽</h1>
+          <p class="hero__sub" data-i18n="home.hero.sub">
+            Выращена в Кургане. Не срезана: растёт у вас дома, вы срезаете сами. 12 культур.
+            150 ₽ за бокс. Доставка бесплатно от 3 боксов по всем районам Кургана.
+          </p>
+          <div class="hero__actions">
+            <a class="btn" href="#/catalog" data-i18n="home.hero.cta1">Смотреть каталог</a>
+            <a class="btn btn--tg" href="https://t.me/Mikrosad45" target="_blank" rel="noopener" data-i18n="home.hero.cta2">Заказать в Telegram</a>
+            <a class="btn btn--max" href="https://max.ru/join/oJYKxbaO0oC77VVNnnvhA10TqD-iGpuqas-XJJAYknU" target="_blank" rel="noopener" data-i18n="home.hero.cta3">Написать в Max</a>
+          </div>
+          <p class="hero__note" data-i18n="home.hero.note">
+            Заказ и оплата через Telegram или Max. Адрес для самовывоза сообщим в мессенджере.
+          </p>
+
+          <div class="stats">
+            <div class="stat"><b data-counter="12">12</b><span data-i18n="home.stat.1">культур микрозелени</span></div>
+            <div class="stat"><b data-counter="150" data-suffix=" ₽">150 ₽</b><span data-i18n="home.stat.2">за любой бокс</span></div>
+            <div class="stat"><b data-counter="14" data-prefix="до ">до 14</b><span data-i18n="home.stat.3">дней живёт бокс</span></div>
+            <div class="stat"><b data-counter="3" data-prefix="от ">от 3</b><span data-i18n="home.stat.4">боксов — доставка бесплатно</span></div>
+          </div>
+        </div>
+        
+        <div style="position:relative">
+          <div class="hero__art" role="img" aria-label="Бокс с живой микрозеленью">
+            <img src="img/goroh.jpg" alt="Свежая микрозелень гороха" loading="eager">
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="benefitsTitle">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 id="benefitsTitle" data-i18n="home.benefits.title">Почему выбирают МикроСад45</h2>
+          <p class="lead" data-i18n="home.benefits.sub">Живая зелень, локальное производство и честная цена — без посредников.</p>
+        </div>
+        <div class="grid grid--4">
+          <article class="card reveal"><h3>🌱 <span data-i18n="home.b1.t">12 культур</span></h3><p class="muted" data-i18n="home.b1.d">От подсолнечника до кинзы — выберите вкус по настроению.</p></article>
+          <article class="card reveal"><h3>✂️ <span data-i18n="home.b2.t">Живая, не срезанная</span></h3><p class="muted" data-i18n="home.b2.d">Бокс с микрозеленью продолжает расти. Срезайте столько, сколько нужно, в любой момент.</p></article>
+          <article class="card reveal"><h3>🚚 <span data-i18n="home.b3.t">Бесплатная доставка</span></h3><p class="muted" data-i18n="home.b3.d">От 3 боксов — бесплатно по всем районам Кургана.</p></article>
+          <article class="card reveal"><h3>💰 <span data-i18n="home.b4.t">Единая цена</span></h3><p class="muted" data-i18n="home.b4.d">150 ₽ за любой бокс. Без скрытых доплат и скидок.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="homeCatalogTitle">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 id="homeCatalogTitle" data-i18n="home.catalog.title">Каталог микрозелени</h2>
+          <p class="lead" data-i18n="home.catalog.sub">12 культур. Все боксы по 150 ₽. Живая, не срезанная.</p>
+        </div>
+        <div class="grid" id="homeCatalog"></div>
+        <p style="margin-top:28px" class="reveal"><a class="btn btn--ghost" href="#/catalog" data-i18n="home.catalog.all">Открыть весь каталог →</a></p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="stepsTitle">
+      <div class="wrap">
+        <div class="section__head reveal"><h2 id="stepsTitle" data-i18n="home.steps.title">Как заказать</h2></div>
+        <div class="grid grid--4">
+          <article class="card reveal"><p class="kicker">01</p><h3 data-i18n="home.s1.t">Выберите культуры</h3><p class="muted" data-i18n="home.s1.d">В каталоге — 12 видов микрозелени. Все по 150 ₽.</p></article>
+          <article class="card reveal"><p class="kicker">02</p><h3 data-i18n="home.s2.t">Напишите нам</h3><p class="muted" data-i18n="home.s2.d">В Telegram или Max. Укажите культуры и количество боксов.</p></article>
+          <article class="card reveal"><p class="kicker">03</p><h3 data-i18n="home.s3.t">Мы доставим</h3><p class="muted" data-i18n="home.s3.d">Бесплатно от 3 боксов по Кургану. Или самовывоз по договорённости.</p></article>
+          <article class="card reveal"><p class="kicker">04</p><h3 data-i18n="home.s4.t">Срезайте и ешьте</h3><p class="muted" data-i18n="home.s4.d">Поставьте бокс на подоконник, поливайте — и срезайте свежую зелень, когда захотите.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок "Нам доверяют" без отзывов -->
+    <section class="section section--alt" aria-labelledby="trustTitle">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <h2 id="trustTitle" data-i18n="home.trust.title">Нам доверяют</h2>
+          <p class="lead" data-i18n="home.trust.sub">Локальное производство в Кургане, живая зелень и честная цена.</p>
+        </div>
+        <div class="grid">
+          <article class="card reveal">
+            <h3 data-i18n="home.trust.prod.t">Производство</h3>
+            <p class="muted" data-i18n="home.trust.prod.d">Мы выращиваем микрозелень в Кургане. Каждый бокс — это живая зелень на субстрате, которая продолжает расти у вас дома.</p>
+            <p><span class="badge" data-i18n="home.trust.prod.b1">12 культур</span> <span class="badge" data-i18n="home.trust.prod.b2">Живая зелень</span> <span class="badge" data-i18n="home.trust.prod.b3">Локально</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ctaTitle">
+      <div class="wrap">
+        <div class="card center reveal" style="padding:clamp(32px,6vw,64px);background:linear-gradient(160deg,var(--surface),color-mix(in srgb,var(--accent) 18%,var(--surface)));border:2px solid color-mix(in srgb,var(--brand) 30%,transparent)">
+          <h2 id="ctaTitle" data-i18n="home.cta.title">Закажите живую микрозелень сегодня</h2>
+          <p class="lead" data-i18n="home.cta.sub">Напишите нам в Telegram или Max — подскажем, что выбрать, и договоримся о доставке.</p>
+          <div class="hero__actions" style="justify-content:center;margin-bottom:0">
+            <a class="btn btn--tg" href="https://t.me/Mikrosad45" target="_blank" rel="noopener" data-i18n="home.cta.btn1">Написать в Telegram</a>
+            <a class="btn btn--max" href="https://max.ru/join/oJYKxbaO0oC77VVNnnvhA10TqD-iGpuqas-XJJAYknU" target="_blank" rel="noopener" data-i18n="home.cta.btn2">Написать в Max</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============================================================
+       КАТАЛОГ
+       ============================================================ -->
+  <div class="page" id="page-catalog">
+    <section class="section">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="#/home" data-i18n="nav.home">Главная</a> → <span data-i18n="nav.catalog">Каталог</span></nav>
+        <h1 data-i18n="catalog.title">Каталог живой микрозелени</h1>
+        <p class="lead" data-i18n="catalog.sub">12 культур. Живая, не срезанная. 150 ₽ за бокс. Доставка бесплатно от 3 боксов по Кургану.</p>
+        <div class="alert" data-i18n="catalog.note">Заказ через Telegram или Max. Укажите культуры и количество боксов.</div>
+
+        <!-- ВКУСОВОЙ НАВИГАТОР (ФИЛЬТРЫ) -->
+        <div class="filters" id="catalogFilters">
+          <!-- Кнопки рендерятся через JS -->
+        </div>
+
+        <div class="grid" id="catalogGrid"></div>
+
+        <!-- ГИД ПО СОЧЕТАНИЯМ -->
+        <div style="margin-top: 56px;" class="reveal">
+          <h2 data-i18n="catalog.pairing.title">С чем есть?</h2>
+          <p class="lead" data-i18n="catalog.pairing.sub">Подсказки, как лучше раскрыть вкус каждой культуры.</p>
+          <div class="grid grid--4" id="pairingGuide" style="margin-top: 24px;"></div>
+        </div>
+
+        <div class="table-wrap" style="margin-top:56px">
+          <table>
+            <caption data-i18n="catalog.table.caption">Цены на все культуры</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th.culture">Культура</th>
+                <th scope="col" data-i18n="th.price">Цена за бокс</th>
+                <th scope="col" data-i18n="th.delivery">Доставка</th>
+              </tr>
+            </thead>
+            <tbody id="catalogTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============================================================
+       ОПТ
+       ============================================================ -->
+  <div class="page" id="page-wholesale">
+    <section class="section">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="#/home" data-i18n="nav.home">Главная</a> → <span data-i18n="nav.wholesale">Опт</span></nav>
+        <h1 data-i18n="wholesale.title">Оптовые заказы</h1>
+        <p class="lead" data-i18n="wholesale.sub">Заказывайте любое количество боксов по единой цене — 150 ₽ за бокс. Доставка бесплатно от 3 боксов по всем районам Кургана. Культуры можно смешивать в любых пропорциях.</p>
+
+        <div class="grid grid--2" style="margin-top:32px">
+          <article class="card reveal">
+            <h3 data-i18n="wholesale.cond.t">Условия</h3>
+            <ul class="mini">
+              <li data-i18n="wholesale.cond.1">Единая цена: 150 ₽ за любой бокс, независимо от количества.</li>
+              <li data-i18n="wholesale.cond.2">Культуры можно смешивать: считаем общее количество боксов.</li>
+              <li data-i18n="wholesale.cond.3">Доставка бесплатно от 3 боксов по всем районам Кургана.</li>
+              <li data-i18n="wholesale.cond.4">Самовывоз — по договорённости, адрес сообщим в Telegram или Max.</li>
+              <li data-i18n="wholesale.cond.5">Оплата: перевод на карту или по СБП. Реквизиты пришлём в мессенджере.</li>
+              <li data-i18n="wholesale.cond.6">Для юридических лиц — счёт и документы по запросу.</li>
+              <li data-i18n="wholesale.cond.7">Регулярным заказам фиксируем день доставки.</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="wholesale.case.t">Кому подходит</h3>
+            <ul class="mini">
+              <li data-i18n="wholesale.case.1"><b>Большим семьям</b> — 25 боксов закрывают две недели свежей зелени без походов в магазин.</li>
+              <li data-i18n="wholesale.case.2"><b>Тем, кто берёт на неделю вперёд</b> — живой бокс не вянет, поэтому запас не пропадает.</li>
+              <li data-i18n="wholesale.case.3"><b>Кафе и кофейням</b> — небольшой объём под сезонное меню без обязательств по договору.</li>
+              <li data-i18n="wholesale.case.4"><b>На подарки и праздники</b> — набор из разных культур в одном заказе.</li>
+            </ul>
+            <div class="alert" style="margin-bottom:0" data-i18n="wholesale.case.note">Юридических лиц обслуживаем по тем же правилам: счёт и документы подготовим по запросу в мессенджере.</div>
+          </article>
+        </div>
+
+        <div class="card center reveal" style="margin-top:32px;background:linear-gradient(160deg,var(--surface),color-mix(in srgb,var(--brand) 12%,var(--surface)))">
+          <h3 data-i18n="wholesale.cta.t">Оформить оптовый заказ</h3>
+          <p class="muted" data-i18n="wholesale.cta.d">Напишите количество боксов и список культур — подтвердим заказ и дату доставки.</p>
+          <div class="hero__actions" style="justify-content:center;margin-bottom:0">
+            <a class="btn btn--tg" href="https://t.me/Mikrosad45" target="_blank" rel="noopener" data-i18n="home.cta.btn1">Написать в Telegram</a>
+            <a class="btn btn--max" href="https://max.ru/join/oJYKxbaO0oC77VVNnnvhA10TqD-iGpuqas-XJJAYknU" target="_blank" rel="noopener" data-i18n="home.cta.btn2">Написать в Max</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============================================================
+       УХОД
+       ============================================================ -->
+  <div class="page" id="page-storage">
+    <section class="section">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="#/home" data-i18n="nav.home">Главная</a> → <span data-i18n="nav.storage">Уход</span></nav>
+        <h1 data-i18n="storage.title">Как ухаживать за живой микрозеленью</h1>
+        <p class="lead" data-i18n="storage.sub">В боксе зелень продолжает расти. Несколько простых правил — и вы будете срезать свежие ростки до двух недель.</p>
+
+        <div class="grid grid--2" style="margin-bottom:32px">
+          <article class="card reveal">
+            <h3 data-i18n="storage.cond.t">Основные правила</h3>
+            <ul class="mini">
+              <li data-i18n="storage.cond.1">Поставьте бокс на подоконник или в другое светлое место.</li>
+              <li data-i18n="storage.cond.2">Поливайте небольшим количеством воды каждые 2–3 дня, не переливайте.</li>
+              <li data-i18n="storage.cond.3">Срезайте ростки ножницами по мере необходимости, начиная с краёв.</li>
+              <li data-i18n="storage.cond.4">Не храните бокс в холодильнике — там зелень перестанет расти.</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3 data-i18n="storage.pack.t">Что в боксе</h3>
+            <ul class="mini">
+              <li data-i18n="storage.pack.1">Живая микрозелень на субстрате.</li>
+              <li data-i18n="storage.pack.2">Инструкция по уходу.</li>
+              <li data-i18n="storage.pack.3">Срок жизни — до 14 дней при правильном уходе.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <caption data-i18n="storage.table.caption">Уход за живой микрозеленью</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th.culture">Культура</th>
+                <th scope="col" data-i18n="sth.shelf">Срок в боксе</th>
+                <th scope="col" data-i18n="sth.water">Полив</th>
+                <th scope="col" data-i18n="sth.light">Свет</th>
+                <th scope="col" data-i18n="sth.cut">Когда срезать</th>
+              </tr>
+            </thead>
+            <tbody id="storageTable"></tbody>
+          </table>
+        </div>
+
+        <h2 style="margin-top:44px" class="reveal" data-i18n="storage.tips.title">4 совета</h2>
+        <div class="grid grid--4">
+          <article class="card reveal"><h3>☀️ <span data-i18n="storage.tip1.t">Свет</span></h3><p class="muted" data-i18n="storage.tip1.d">Чем больше света, тем активнее растёт зелень. Зимой можно подсвечивать лампой.</p></article>
+          <article class="card reveal"><h3>💧 <span data-i18n="storage.tip2.t">Полив</span></h3><p class="muted" data-i18n="storage.tip2.d">Субстрат должен быть влажным, но не мокрым. Лейте по краю бокса.</p></article>
+          <article class="card reveal"><h3>✂️ <span data-i18n="storage.tip3.t">Срезка</span></h3><p class="muted" data-i18n="storage.tip3.d">Срезайте на 1–2 см выше субстрата — так зелень быстрее отрастёт снова.</p></article>
+          <article class="card reveal"><h3>🧼 <span data-i18n="storage.tip4.t">Не мойте заранее</span></h3><p class="muted" data-i18n="storage.tip4.d">Мойте только те ростки, которые собираетесь съесть сразу.</p></article>
+        </div>
+
+        <div class="alert notice-ok reveal" style="margin-top:32px" data-i18n="storage.outro">
+          <b>Покупая живой бокс, вы получаете не пучок зелени, а мини-огород.</b> Это выгоднее: зелень не вянет, вы срезаете ровно столько, сколько нужно, и всегда имеете под рукой свежие витамины. А при заказе от 3 боксов доставка по Кургану бесплатная.
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============================================================
+       РЕЦЕПТЫ
+       ============================================================ -->
+  <div class="page" id="page-recipes">
+    <section class="section">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="#/home" data-i18n="nav.home">Главная</a> → <span data-i18n="nav.recipes">Рецепты</span></nav>
+        <h1 data-i18n="recipes.title">Рецепты с микрозеленью</h1>
+        <p class="lead" data-i18n="recipes.sub">Простые блюда на 5–20 минут. Микрозелень добавляют в самом конце — от тепла она теряет вкус и пользу.</p>
+        <div class="grid" id="recipesGrid" style="margin-top:28px"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============================================================
+       БЛОГ
+       ============================================================ -->
+  <div class="page" id="page-blog">
+    <section class="section">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="#/home" data-i18n="nav.home">Главная</a> → <span data-i18n="nav.blog">Блог</span></nav>
+        <h1 data-i18n="blog.title">Блог</h1>
+        <p class="lead" data-i18n="blog.sub">Разбираем пользу, уход и экономику микрозелени — без маркетинговых сказок. В каждой статье — краткое содержание и ключевые запросы.</p>
+        <div class="grid" id="blogGrid" style="margin-top:28px"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <div class="page" id="page-faq">
+    <section class="section">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="#/home" data-i18n="nav.home">Главная</a> → <span data-i18n="nav.faq">FAQ</span></nav>
+        <h1 data-i18n="faq.title">Частые вопросы</h1>
+        <p class="lead" data-i18n="faq.sub">Если не нашли ответ — напишите в чат-бот справа или в мессенджер.</p>
+        <div id="faqList" style="margin-top:28px"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============================================================
+       КОНТАКТЫ
+       ============================================================ -->
+  <div class="page" id="page-contacts">
+    <section class="section">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="#/home" data-i18n="nav.home">Главная</a> → <span data-i18n="nav.contacts">Контакты</span></nav>
+        <h1 data-i18n="contacts.title">Контакты</h1>
+        <p class="lead" data-i18n="contacts.sub">Мы в Кургане. Свяжитесь с нами в удобном мессенджере — там же сообщим адрес для самовывоза.</p>
+
+        <div class="grid grid--2" style="margin-top:28px">
+          <div class="card reveal">
+            <h3 data-i18n="contacts.tg.t">Telegram</h3>
+            <p class="muted" data-i18n="contacts.tg.d">Наш канал: новости, наличие культур, условия доставки и опта.</p>
+            <p><a class="btn btn--tg" href="https://t.me/Mikrosad45" target="_blank" rel="noopener">t.me/Mikrosad45</a></p>
+          </div>
+          <div class="card reveal">
+            <h3 data-i18n="contacts.max.t">Max</h3>
+            <p class="muted" data-i18n="contacts.max.d">Наш канал в Max — альтернативный способ связи и заказа.</p>
+            <p><a class="btn btn--max" href="https://max.ru/join/oJYKxbaO0oC77VVNnnvhA10TqD-iGpuqas-XJJAYknU" target="_blank" rel="noopener">max.ru/join/…</a></p>
+          </div>
+        </div>
+
+        <div class="alert reveal" style="margin-top:32px" data-i18n="contacts.note">
+          Заказ, оплата и доставка обсуждаются в мессенджерах. Телефона и адреса на сайте нет — адрес для самовывоза сообщим в Telegram или Max.
+        </div>
+
+        <div class="card reveal" style="margin-top:20px">
+          <h3 data-i18n="contacts.price.t">Кратко о ценах</h3>
+          <ul class="mini">
+            <li data-i18n="contacts.price.1">150 ₽ за любой бокс.</li>
+            <li data-i18n="contacts.price.2">Доставка бесплатно от 3 боксов по всем районам Кургана.</li>
+            <li data-i18n="contacts.price.3">Скидок нет — единая цена.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<!-- ================= ПОДВАЛ ================= -->
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="#/home">
+          <img class="logo__img" src="img/i.png" alt="" width="40" height="40">
+          <span>МикроСад45</span>
+        </a>
+        <p class="muted small" style="margin-top:14px" data-i18n="footer.about">Живая микрозелень в боксах. Выращена в Кургане. 12 культур: 150 ₽ за бокс. Доставка бесплатно от 3 боксов.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.nav">Навигация</h4>
+        <ul>
+          <li><a href="#/catalog" data-i18n="nav.catalog">Каталог</a></li>
+          <li><a href="#/wholesale" data-i18n="nav.wholesale">Опт</a></li>
+          <li><a href="#/storage" data-i18n="nav.storage">Уход</a></li>
+          <li><a href="#/recipes" data-i18n="nav.recipes">Рецепты</a></li>
+          <li><a href="#/blog" data-i18n="nav.blog">Блог</a></li>
+          <li><a href="#/faq" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contacts">Связь</h4>
+        <ul>
+          <li><a href="https://t.me/Mikrosad45" target="_blank" rel="noopener">Telegram</a></li>
+          <li><a href="https://max.ru/join/oJYKxbaO0oC77VVNnnvhA10TqD-iGpuqas-XJJAYknU" target="_blank" rel="noopener">Max</a></li>
+          <li data-i18n="footer.city">Курган</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.info">Информация</h4>
+        <ul>
+          <li><a href="#/faq" data-i18n="footer.info.1">Доставка и оплата</a></li>
+          <li><a href="#/wholesale" data-i18n="footer.info.3">Оптовые заказы</a></li>
+          <li><a href="#/storage" data-i18n="footer.info.2">Уход за микрозеленью</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= ЧАТ-БОТ ================= -->
+<aside class="chat" role="complementary" aria-label="Чат-бот поддержки">
+  <button type="button" class="chat__toggle" id="chatToggle" aria-expanded="false" aria-controls="chatPanel">
+    <span aria-hidden="true">💬</span>
+    <span data-i18n="chat.toggle">Чат-бот</span>
+  </button>
+
+  <div class="chat__panel" id="chatPanel">
+    <div class="chat__head">
+      <span data-i18n="chat.head">Помощник МикроСад45</span>
+      <button type="button" id="chatClose" aria-label="Закрыть чат">✕</button>
+    </div>
+
+    <div class="chat__log" id="chatLog" role="log" aria-live="polite" aria-label="История диалога"></div>
+
+    <div class="chat__topics" id="chatTopics" role="group" aria-label="Быстрые темы"></div>
+
+    <form class="chat__input" id="chatForm" autocomplete="off">
+      <label class="sr-only" for="chatInput" data-i18n="chat.input.label">Ваш вопрос</label>
+      <input id="chatInput" type="text" data-i18n-ph="chat.input.ph" placeholder="Напишите вопрос…">
+      <button class="btn btn--sm" type="submit" aria-label="Отправить сообщение">→</button>
+    </form>
+
+    <div class="chat__foot">
+      <button type="button" class="btn btn--ghost btn--sm btn--block" id="chatOperator" data-i18n="chat.operator">Связаться с оператором</button>
+    </div>
+  </div>
+</aside>
+
+<script>
+/* =============================================================
+   0. ХРАНИЛИЩЕ И СОСТОЯНИЕ
+   ============================================================= */
+const LS = { lang: 'ms45_lang', a11y: 'ms45_a11y' };
+let lang = localStorage.getItem(LS.lang) === 'en' ? 'en' : 'ru';
+
+const TG_URL  = 'https://t.me/Mikrosad45';
+const MAX_URL = 'https://max.ru/join/oJYKxbaO0oC77VVNnnvhA10TqD-iGpuqas-XJJAYknU';
+
+const PRICE = 150;
+
+/* =============================================================
+   1. ПЕРЕВОДЫ
+   ============================================================= */
+const I18N = {
+  ru: {
+    'nav.home':'Главная','nav.catalog':'Каталог','nav.wholesale':'Опт','nav.storage':'Уход',
+    'nav.recipes':'Рецепты','nav.blog':'Блог','nav.faq':'FAQ','nav.contacts':'Контакты',
+    'header.a11y':'Для слабовидящих',
+
+    'home.hero.kicker':'Курган · живая микрозелень в боксах',
+    'home.hero.title':'Живая микрозелень в боксе — 150 ₽',
+    'home.hero.sub':'Выращена в Кургане. Не срезана: растёт у вас дома, вы срезаете сами. 12 культур. 150 ₽ за бокс. Доставка бесплатно от 3 боксов по всем районам Кургана.',
+    'home.hero.cta1':'Смотреть каталог','home.hero.cta2':'Заказать в Telegram','home.hero.cta3':'Написать в Max',
+    'home.hero.note':'Заказ и оплата через Telegram или Max. Адрес для самовывоза сообщим в мессенджере.',
+    'home.hero.badge1':'Срезано сегодня','home.hero.badge2':'Доставка по Кургану',
+    'home.stat.1':'культур микрозелени','home.stat.2':'за любой бокс',
+    'home.stat.3':'дней живёт бокс','home.stat.4':'боксов — доставка бесплатно',
+
+    'home.benefits.title':'Почему выбирают МикроСад45',
+    'home.benefits.sub':'Живая зелень, локальное производство и честная цена — без посредников.',
+    'home.b1.t':'12 культур','home.b1.d':'От подсолнечника до кинзы — выберите вкус по настроению.',
+    'home.b2.t':'Живая, не срезанная','home.b2.d':'Бокс с микрозеленью продолжает расти. Срезайте столько, сколько нужно, в любой момент.',
+    'home.b3.t':'Бесплатная доставка','home.b3.d':'От 3 боксов — бесплатно по всем районам Кургана.',
+    'home.b4.t':'Единая цена','home.b4.d':'150 ₽ за любой бокс. Без скрытых доплат и скидок.',
+
+    'home.catalog.title':'Каталог микрозелени','home.catalog.sub':'12 культур. Все боксы по 150 ₽. Живая, не срезанная.',
+    'home.catalog.all':'Открыть весь каталог →',
+
+    'home.steps.title':'Как заказать',
+    'home.s1.t':'Выберите культуры','home.s1.d':'В каталоге — 12 видов микрозелени. Все по 150 ₽.',
+    'home.s2.t':'Напишите нам','home.s2.d':'В Telegram или Max. Укажите культуры и количество боксов.',
+    'home.s3.t':'Мы доставим','home.s3.d':'Бесплатно от 3 боксов по Кургану. Или самовывоз по договорённости.',
+    'home.s4.t':'Срезайте и ешьте','home.s4.d':'Поставьте бокс на подоконник, поливайте — и срезайте свежую зелень, когда захотите.',
+
+    'home.trust.title':'Нам доверяют','home.trust.sub':'Локальное производство в Кургане, живая зелень и честная цена.',
+    'home.trust.prod.t':'Производство','home.trust.prod.d':'Мы выращиваем микрозелень в Кургане. Каждый бокс — это живая зелень на субстрате, которая продолжает расти у вас дома.',
+    'home.trust.prod.b1':'12 культур','home.trust.prod.b2':'Живая зелень','home.trust.prod.b3':'Локально',
+    
+    'home.cta.title':'Закажите живую микрозелень сегодня',
+    'home.cta.sub':'Напишите нам в Telegram или Max — подскажем, что выбрать, и договоримся о доставке.',
+    'home.cta.btn1':'Написать в Telegram','home.cta.btn2':'Написать в Max',
+
+    'catalog.title':'Каталог живой микрозелени',
+    'catalog.sub':'12 культур. Живая, не срезанная. 150 ₽ за бокс. Доставка бесплатно от 3 боксов по Кургану.',
+    'catalog.note':'Заказ через Telegram или Max. Укажите культуры и количество боксов.',
+    'catalog.order.tg':'Заказать в Telegram','catalog.order.max':'Написать в Max',
+    'catalog.table.caption':'Цены на все культуры',
+    'th.culture':'Культура','th.price':'Цена за бокс','th.delivery':'Доставка',
+
+    'catalog.filter.all':'Все',
+    'catalog.filter.spicy':'Остренькое',
+    'catalog.filter.sweet':'Сладкое',
+    'catalog.filter.aromatic':'Пряное',
+    'catalog.filter.neutral':'Нейтральное',
+    'catalog.pairing.title':'С чем есть?',
+    'catalog.pairing.sub':'Подсказки, как лучше раскрыть вкус каждой культуры.',
+
+    'wholesale.title':'Оптовые заказы',
+    'wholesale.sub':'Заказывайте любое количество боксов по единой цене — 150 ₽ за бокс. Доставка бесплатно от 3 боксов по всем районам Кургана. Культуры можно смешивать в любых пропорциях.',
+    'wholesale.cond.t':'Условия',
+    'wholesale.cond.1':'Единая цена: 150 ₽ за любой бокс, независимо от количества.',
+    'wholesale.cond.2':'Культуры можно смешивать: считаем общее количество боксов.',
+    'wholesale.cond.3':'Доставка бесплатно от 3 боксов по всем районам Кургана.',
+    'wholesale.cond.4':'Самовывоз — по договорённости, адрес сообщим в Telegram или Max.',
+    'wholesale.cond.5':'Оплата: перевод на карту или по СБП. Реквизиты пришлём в мессенджере.',
+    'wholesale.cond.6':'Для юридических лиц — счёт и документы по запросу.',
+    'wholesale.cond.7':'Регулярным заказам фиксируем день доставки.',
+    'wholesale.case.t':'Кому подходит',
+    'wholesale.case.1':'Большим семьям — 25 боксов закрывают две недели свежей зелени без походов в магазин.',
+    'wholesale.case.2':'Тем, кто берёт на неделю вперёд — живой бокс не вянет, поэтому запас не пропадает.',
+    'wholesale.case.3':'Кафе и кофейням — небольшой объём под сезонное меню без обязательств по договору.',
+    'wholesale.case.4':'На подарки и праздники — набор из разных культур в одном заказе.',
+    'wholesale.case.note':'Юридических лиц обслуживаем по тем же правилам: счёт и документы подготовим по запросу в мессенджере.',
+    'wholesale.cta.t':'Оформить оптовый заказ',
+    'wholesale.cta.d':'Напишите количество боксов и список культур — подтвердим заказ и дату доставки.',
+
+    'storage.title':'Как ухаживать за живой микрозеленью',
+    'storage.sub':'В боксе зелень продолжает расти. Несколько простых правил — и вы будете срезать свежие ростки до двух недель.',
+    'storage.cond.t':'Основные правила',
+    'storage.cond.1':'Поставьте бокс на подоконник или в другое светлое место.',
+    'storage.cond.2':'Поливайте небольшим количеством воды каждые 2–3 дня, не переливайте.',
+    'storage.cond.3':'Срезайте ростки ножницами по мере необходимости, начиная с краёв.',
+    'storage.cond.4':'Не храните бокс в холодильнике — там зелень перестанет расти.',
+    'storage.pack.t':'Что в боксе',
+    'storage.pack.1':'Живая микрозелень на субстрате.',
+    'storage.pack.2':'Инструкция по уходу.',
+    'storage.pack.3':'Срок жизни — до 14 дней при правильном уходе.',
+    'storage.table.caption':'Уход за живой микрозеленью',
+    'sth.shelf':'Срок в боксе','sth.water':'Полив','sth.light':'Свет','sth.cut':'Когда срезать',
+    'storage.tips.title':'4 совета',
+    'storage.tip1.t':'Свет','storage.tip1.d':'Чем больше света, тем активнее растёт зелень. Зимой можно подсвечивать лампой.',
+    'storage.tip2.t':'Полив','storage.tip2.d':'Субстрат должен быть влажным, но не мокрым. Лейте по краю бокса.',
+    'storage.tip3.t':'Срезка','storage.tip3.d':'Срезайте на 1–2 см выше субстрата — так зелень быстрее отрастёт снова.',
+    'storage.tip4.t':'Не мойте заранее','storage.tip4.d':'Мойте только те ростки, которые собираетесь съесть сразу.',
+    'storage.outro':'Покупая живой бокс, вы получаете не пучок зелени, а мини-огород. Это выгоднее: зелень не вянет, вы срезаете ровно столько, сколько нужно, и всегда имеете под рукой свежие витамины. А при заказе от 3 боксов доставка по Кургану бесплатная.',
+
+    'recipes.title':'Рецепты с микрозеленью',
+    'recipes.sub':'Простые блюда на 5–20 минут. Микрозелень добавляют в самом конце — от тепла она теряет вкус и пользу.',
+    'recipes.ing':'Ингредиенты','recipes.steps':'Приготовление','recipes.time':'Время','recipes.kcal':'Калорийность','recipes.tip':'Совет',
+
+    'blog.title':'Блог',
+    'blog.sub':'Разбираем пользу, уход и экономику микрозелени — без маркетинговых сказок. В каждой статье — краткое содержание и ключевые запросы.',
+    'blog.keys':'Ключевые запросы','blog.read':'Чтение','blog.about':'О чём статья',
+
+    'faq.title':'Частые вопросы','faq.sub':'Если не нашли ответ — напишите в чат-бот справа или в мессенджер.',
+
+    'contacts.title':'Контакты',
+    'contacts.sub':'Мы в Кургане. Свяжитесь с нами в удобном мессенджере — там же сообщим адрес для самовывоза.',
+    'contacts.tg.t':'Telegram','contacts.tg.d':'Наш канал: новости, наличие культур, условия доставки и опта.',
+    'contacts.max.t':'Max','contacts.max.d':'Наш канал в Max — альтернативный способ связи и заказа.',
+    'contacts.note':'Заказ, оплата и доставка обсуждаются в мессенджерах. Телефона и адреса на сайте нет — адрес для самовывоза сообщим в Telegram или Max.',
+    'contacts.price.t':'Кратко о ценах',
+    'contacts.price.1':'150 ₽ за любой бокс.',
+    'contacts.price.2':'Доставка бесплатно от 3 боксов по всем районам Кургана.',
+    'contacts.price.3':'Скидок нет — единая цена.',
+
+    'footer.about':'Живая микрозелень в боксах. Выращена в Кургане. 12 культур: 150 ₽ за бокс. Доставка бесплатно от 3 боксов.',
+    'footer.nav':'Навигация','footer.contacts':'Связь','footer.info':'Информация',
+    'footer.city':'Курган','footer.info.1':'Доставка и оплата','footer.info.2':'Уход за микрозеленью','footer.info.3':'Оптовые заказы',
+
+    'chat.toggle':'Чат-бот','chat.head':'Помощник МикроСад45','chat.operator':'Связаться с оператором',
+    'chat.input.ph':'Напишите вопрос…','chat.input.label':'Ваш вопрос',
+    'chat.greeting':'Здравствуйте! Я помощник МикроСад45.\nПомогу с заказом, ценами, оптом, доставкой и уходом за микрозеленью. Выберите тему ниже или просто напишите вопрос.',
+    'chat.fallback':'Пока не понял вопрос. Попробуйте переформулировать или выберите тему кнопкой ниже. Если нужен человек — нажмите «Связаться с оператором».',
+    'chat.escalate':'Передаю запрос оператору. Обычно отвечаем в течение 15 минут в рабочее время. Можно также написать в Telegram или Max — там отвечаем быстрее всего.',
+    'chat.topic.order':'Как заказать','chat.topic.price':'Цены','chat.topic.wholesale':'Опт',
+    'chat.topic.delivery':'Доставка','chat.topic.payment':'Оплата','chat.topic.pickup':'Самовывоз',
+    'chat.topic.care':'Уход','chat.topic.shelf':'Срок жизни','chat.topic.quality':'Качество',
+    'chat.topic.assortment':'Какие культуры','chat.topic.contact':'Связаться',
+
+    'marquee.1':'Живая микрозелень','marquee.2':'150 ₽ за бокс','marquee.3':'Доставка бесплатно от 3 боксов','marquee.4':'12 культур','marquee.5':'Выращено в Кургане'
+  },
+
+  en: {
+    'nav.home':'Home','nav.catalog':'Catalog','nav.wholesale':'Wholesale','nav.storage':'Care',
+    'nav.recipes':'Recipes','nav.blog':'Blog','nav.faq':'FAQ','nav.contacts':'Contacts',
+    'header.a11y':'Accessibility',
+
+    'home.hero.kicker':'Kurgan · live microgreens in boxes',
+    'home.hero.title':'Live microgreens in a box — 150 ₽',
+    'home.hero.sub':'Grown in Kurgan. Not cut: it keeps growing at your home, you harvest it yourself. 12 varieties. 150 ₽ per box. Free delivery from 3 boxes across all districts of Kurgan.',
+    'home.hero.cta1':'Browse catalog','home.hero.cta2':'Order in Telegram','home.hero.cta3':'Write in Max',
+    'home.hero.note':'Order and payment via Telegram or Max. We will share the pickup address in the messenger.',
+    'home.hero.badge1':'Cut today','home.hero.badge2':'Delivery in Kurgan',
+    'home.stat.1':'microgreen varieties','home.stat.2':'per box',
+    'home.stat.3':'days the box lives','home.stat.4':'boxes — free delivery',
+
+    'home.benefits.title':'Why people choose MicroSad45',
+    'home.benefits.sub':'Live greens, local production and a fair price — no middlemen.',
+    'home.b1.t':'12 varieties','home.b1.d':'From sunflower to coriander — pick the taste you like.',
+    'home.b2.t':'Live, not cut','home.b2.d':'The box keeps growing. Harvest as much as you need, whenever you want.',
+    'home.b3.t':'Free delivery','home.b3.d':'From 3 boxes — free across all districts of Kurgan.',
+    'home.b4.t':'One price','home.b4.d':'150 ₽ per box. No hidden fees or discounts.',
+
+    'home.catalog.title':'Microgreens catalog','home.catalog.sub':'12 varieties. All boxes 150 ₽. Live, not cut.',
+    'home.catalog.all':'Open the full catalog →',
+
+    'home.steps.title':'How to order',
+    'home.s1.t':'Choose varieties','home.s1.d':'12 microgreen types in the catalog. All 150 ₽.',
+    'home.s2.t':'Message us','home.s2.d':'In Telegram or Max. Tell us the varieties and number of boxes.',
+    'home.s3.t':'We deliver','home.s3.d':'Free from 3 boxes in Kurgan. Or pickup by arrangement.',
+    'home.s4.t':'Harvest and eat','home.s4.d':'Put the box on a windowsill, water it — and cut fresh greens whenever you like.',
+
+    'home.trust.title':'Trusted by','home.trust.sub':'Local production in Kurgan, live greens and a fair price.',
+    'home.trust.prod.t':'Production','home.trust.prod.d':'We grow microgreens in Kurgan. Every box is live greens on a substrate that keeps growing at your home.',
+    'home.trust.prod.b1':'12 varieties','home.trust.prod.b2':'Live greens','home.trust.prod.b3':'Local',
+    
+    'home.cta.title':'Order live microgreens today',
+    'home.cta.sub':'Write to us in Telegram or Max — we will help you choose and arrange delivery.',
+    'home.cta.btn1':'Write in Telegram','home.cta.btn2':'Write in Max',
+
+    'catalog.title':'Live microgreens catalog',
+    'catalog.sub':'12 varieties. Live, not cut. 150 ₽ per box. Free delivery from 3 boxes in Kurgan.',
+    'catalog.note':'Order via Telegram or Max. Tell us the varieties and number of boxes.',
+    'catalog.order.tg':'Order in Telegram','catalog.order.max':'Write in Max',
+    'catalog.table.caption':'Prices for all varieties',
+    'th.culture':'Variety','th.price':'Price per box','th.delivery':'Delivery',
+
+    'catalog.filter.all':'All',
+    'catalog.filter.spicy':'Spicy',
+    'catalog.filter.sweet':'Sweet',
+    'catalog.filter.aromatic':'Aromatic',
+    'catalog.filter.neutral':'Neutral',
+    'catalog.pairing.title':'What to eat it with?',
+    'catalog.pairing.sub':'Tips on how to best reveal the taste of each variety.',
+
+    'wholesale.title':'Wholesale orders',
+    'wholesale.sub':'Order any number of boxes at one price — 150 ₽ per box. Free delivery from 3 boxes across all districts of Kurgan. Varieties can be mixed in any proportion.',
+    'wholesale.cond.t':'Terms',
+    'wholesale.cond.1':'One price: 150 ₽ per box, regardless of quantity.',
+    'wholesale.cond.2':'Varieties can be mixed: we count the total number of boxes.',
+    'wholesale.cond.3':'Free delivery from 3 boxes across all districts of Kurgan.',
+    'wholesale.cond.4':'Pickup by arrangement; we will share the address in Telegram or Max.',
+    'wholesale.cond.5':'Payment: card transfer or SBP. We will send the details in the messenger.',
+    'wholesale.cond.6':'For companies — invoice and documents on request.',
+    'wholesale.cond.7':'For regular orders we fix the delivery day.',
+    'wholesale.case.t':'Who it suits',
+    'wholesale.case.1':'Big families — 25 boxes cover two weeks of fresh greens without shopping trips.',
+    'wholesale.case.2':'Those who buy a week ahead — a live box does not wilt, so the stock does not go to waste.',
+    'wholesale.case.3':'Cafés and coffee shops — a small volume for a seasonal menu with no contract obligations.',
+    'wholesale.case.4':'Gifts and celebrations — a set of different varieties in one order.',
+    'wholesale.case.note':'We serve companies under the same rules: invoice and documents on request in the messenger.',
+    'wholesale.cta.t':'Place a wholesale order',
+    'wholesale.cta.d':'Send us the number of boxes and the list of varieties — we will confirm the order and the delivery date.',
+
+    'storage.title':'How to care for live microgreens',
+    'storage.sub':'The greens keep growing in the box. A few simple rules — and you will harvest fresh shoots for up to two weeks.',
+    'storage.cond.t':'Basic rules',
+    'storage.cond.1':'Place the box on a windowsill or another bright spot.',
+    'storage.cond.2':'Water with a small amount every 2–3 days, do not overwater.',
+    'storage.cond.3':'Cut the shoots with scissors as needed, starting from the edges.',
+    'storage.cond.4':'Do not keep the box in the fridge — the greens will stop growing.',
+    'storage.pack.t':'What is in the box',
+    'storage.pack.1':'Live microgreens on a substrate.',
+    'storage.pack.2':'Care instructions.',
+    'storage.pack.3':'Shelf life — up to 14 days with proper care.',
+    'storage.table.caption':'Live microgreens care',
+    'sth.shelf':'Shelf life in box','sth.water':'Watering','sth.light':'Light','sth.cut':'When to cut',
+    'storage.tips.title':'4 tips',
+    'storage.tip1.t':'Light','storage.tip1.d':'More light means faster growth. In winter you can use a lamp.',
+    'storage.tip2.t':'Watering','storage.tip2.d':'The substrate should be moist, not wet. Water along the edge of the box.',
+    'storage.tip3.t':'Cutting','storage.tip3.d':'Cut 1–2 cm above the substrate — the greens will regrow faster.',
+    'storage.tip4.t':'Do not wash early','storage.tip4.d':'Wash only the shoots you are about to eat.',
+    'storage.outro':'Buying a live box gives you a mini garden, not just a bunch of greens. It is more economical: the greens do not wilt, you cut exactly what you need, and you always have fresh vitamins at hand. And from 3 boxes delivery in Kurgan is free.',
+
+    'recipes.title':'Microgreens recipes',
+    'recipes.sub':'Simple dishes in 5–20 minutes. Add microgreens at the very end — heat kills both taste and nutrients.',
+    'recipes.ing':'Ingredients','recipes.steps':'Method','recipes.time':'Time','recipes.kcal':'Calories','recipes.tip':'Tip',
+
+    'blog.title':'Blog',
+    'blog.sub':'Benefits, care and the economics of microgreens — without marketing fairy tales. Each article includes a summary and key queries.',
+    'blog.keys':'Keywords','blog.read':'Read','blog.about':'What is inside',
+
+    'faq.title':'Frequently asked questions','faq.sub':'If you cannot find an answer, use the chat bot on the right or message us.',
+
+    'contacts.title':'Contacts',
+    'contacts.sub':'We are in Kurgan. Contact us in a convenient messenger — we will also share the pickup address there.',
+    'contacts.tg.t':'Telegram','contacts.tg.d':'Our channel: news, availability, delivery and wholesale terms.',
+    'contacts.max.t':'Max','contacts.max.d':'Our Max channel — an alternative way to get in touch and order.',
+    'contacts.note':'Orders, payment and delivery are discussed in messengers. There is no phone or address on the website — we will share the pickup address in Telegram or Max.',
+    'contacts.price.t':'Prices at a glance',
+    'contacts.price.1':'150 ₽ per box.',
+    'contacts.price.2':'Free delivery from 3 boxes across all districts of Kurgan.',
+    'contacts.price.3':'No discounts — one price.',
+
+    'footer.about':'Live microgreens in boxes. Grown in Kurgan. 12 varieties: 150 ₽ per box. Free delivery from 3 boxes.',
+    'footer.nav':'Navigation','footer.contacts':'Contact','footer.info':'Information',
+    'footer.city':'Kurgan','footer.info.1':'Delivery & payment','footer.info.2':'Microgreens care','footer.info.3':'Wholesale orders',
+
+    'chat.toggle':'Chat bot','chat.head':'MicroSad45 assistant','chat.operator':'Talk to an operator',
+    'chat.input.ph':'Type your question…','chat.input.label':'Your question',
+    'chat.greeting':'Hello! I am the MicroSad45 assistant.\nI can help with orders, prices, wholesale, delivery and microgreens care. Pick a topic below or just type your question.',
+    'chat.fallback':'I did not quite get that. Try rephrasing or pick a topic with a button below. If you need a human, press “Talk to an operator”.',
+    'chat.escalate':'Connecting you to an operator. We usually reply within 15 minutes during business hours. You can also write in Telegram or Max — that is the fastest way.',
+    'chat.topic.order':'How to order','chat.topic.price':'Prices','chat.topic.wholesale':'Wholesale',
+    'chat.topic.delivery':'Delivery','chat.topic.payment':'Payment','chat.topic.pickup':'Pickup',
+    'chat.topic.care':'Care','chat.topic.shelf':'Shelf life','chat.topic.quality':'Quality',
+    'chat.topic.assortment':'Varieties','chat.topic.contact':'Contact us',
+
+    'marquee.1':'Live microgreens','marquee.2':'150 ₽ per box','marquee.3':'Free delivery from 3 boxes','marquee.4':'12 varieties','marquee.5':'Grown in Kurgan'
+  }
+};
+
+const t = (key) => (I18N[lang] && I18N[lang][key]) || (I18N.ru[key] || key);
+
+/* =============================================================
+   2. КАТАЛОГ — 12 КУЛЬТУР
+   ============================================================= */
+const PRODUCTS = [
+  { id:'sunflower', color:'sunflower', img:'img/podsolnechnik.jpg', taste:'neutral',
+    ru:{ name:'Подсолнечник', desc:'Плотные ростки с ореховым вкусом и хрустящей текстурой.', pairing:'Сэндвичи, салаты, тосты с авокадо.' },
+    en:{ name:'Sunflower', desc:'Dense shoots with a nutty flavour and crunchy texture.', pairing:'Sandwiches, salads, avocado toast.' } },
+  { id:'pea', color:'pea', img:'img/goroh.jpg', taste:'sweet',
+    ru:{ name:'Горох', desc:'Сладкие, сочные и хрустящие ростки. Любимая культура детей.', pairing:'Смузи, боулы, салаты, гарниры.' },
+    en:{ name:'Pea', desc:'Sweet, juicy and crunchy shoots. A favourite with kids.', pairing:'Smoothies, bowls, salads, side dishes.' } },
+  { id:'radish', color:'radish', img:'img/Redis.jpg', taste:'spicy',
+    ru:{ name:'Редис', desc:'Яркий перечный вкус и розово-зелёные стебли.', pairing:'Рыба, мясо, бутерброды, салаты.' },
+    en:{ name:'Radish', desc:'Bright peppery flavour with pink-green stems.', pairing:'Fish, meat, sandwiches, salads.' } },
+  { id:'arugula', color:'arugula', img:'img/rucolla.jpg', taste:'spicy',
+    ru:{ name:'Руккола', desc:'Орехово-горчичный вкус с узнаваемой остротой.', pairing:'Пицца, паста, салаты с грушей.' },
+    en:{ name:'Arugula', desc:'Nutty-mustard flavour with a signature pepperiness.', pairing:'Pizza, pasta, salads with pear.' } },
+  { id:'cress', color:'cress', img:'img/cress_salat.jpg', taste:'spicy',
+    ru:{ name:'Кресс-салат', desc:'Острый, свежий вкус и тонкие стебли.', pairing:'Рыба, сыр, сэндвичи, творог.' },
+    en:{ name:'Cress', desc:'Sharp, fresh flavour with fine stems.', pairing:'Fish, cheese, sandwiches, cottage cheese.' } },
+  { id:'lettuce', color:'lettuce', img:'img/Salat.jpg', taste:'neutral',
+    ru:{ name:'Салат', desc:'Нежные, сочные листья с мягким вкусом.', pairing:'Универсальная основа для любых салатов.' },
+    en:{ name:'Lettuce', desc:'Tender, juicy leaves with a mild flavour.', pairing:'A versatile base for any salad.' } },
+  { id:'sorrel', color:'sorrel', img:'img/chavell.jpg', taste:'aromatic',
+    ru:{ name:'Щавель', desc:'Приятная кислинка и свежий травянистый аромат.', pairing:'Супы, соусы, салаты, окрошка.' },
+    en:{ name:'Sorrel', desc:'Pleasant sourness and fresh herbal aroma.', pairing:'Soups, sauces, salads, okroshka.' } },
+  { id:'basil', color:'basil', img:'img/Bazelik.jpg', taste:'aromatic',
+    ru:{ name:'Базилик', desc:'Концентрированный пряный аромат.', pairing:'Томаты, паста, пицца, капрезе.' },
+    en:{ name:'Basil', desc:'Concentrated aromatic flavour.', pairing:'Tomatoes, pasta, pizza, caprese.' } },
+  { id:'cabbage', color:'cabbage', img:'img/kapusta.jpg', taste:'neutral',
+    ru:{ name:'Капуста', desc:'Нежные ростки с лёгкой горчинкой.', pairing:'Салаты, смузи, гарниры.' },
+    en:{ name:'Cabbage', desc:'Tender shoots with a slight bitterness.', pairing:'Salads, smoothies, side dishes.' } },
+  { id:'mustard', color:'mustard', img:'img/GORCHICHA.jpg', taste:'spicy',
+    ru:{ name:'Горчица', desc:'Пикантный, слегка острый вкус.', pairing:'Мясо, салаты, бургеры.' },
+    en:{ name:'Mustard', desc:'Piquant, slightly hot flavour.', pairing:'Meat, salads, burgers.' } },
+  { id:'parsley', color:'parsley', img:'img/Petruska.jpg', taste:'aromatic',
+    ru:{ name:'Петрушка', desc:'Классический пряный вкус.', pairing:'Супы, гарниры, салаты, рыба.' },
+    en:{ name:'Parsley', desc:'Classic herbal flavour.', pairing:'Soups, side dishes, salads, fish.' } },
+  { id:'coriander', color:'coriander', img:'img/Kinza.jpg', taste:'aromatic',
+    ru:{ name:'Кинза', desc:'Пряный, цитрусово-мыльный аромат.', pairing:'Азиатские супы, сальса, маринады.' },
+    en:{ name:'Coriander', desc:'Pungent, citrus-soapy aroma.', pairing:'Asian soups, salsa, marinades.' } }
+];
+
+/* =============================================================
+   3. ТАБЛИЦА УХОДА
+   ============================================================= */
+const STORAGE_ROWS = [
+  { ru:['Все культуры','до 14 дней','каждые 2–3 дня','светлое место','по мере роста'],
+    en:['All varieties','up to 14 days','every 2–3 days','bright spot','as it grows'] }
+];
+
+/* =============================================================
+   4. РЕЦЕПТЫ
+   ============================================================= */
+const RECIPES = [
+  { emoji:'🥤', time:{ru:'5 мин',en:'5 min'}, kcal:'180',
+    ru:{ name:'Смузи «Зелёный заряд»', ing:['1 горсть микрозелени','1 банан','1 зелёное яблоко','200 мл воды или растительного молока','1 ч. л. мёда'],
+         steps:['Взбейте всё в блендере 40 секунд.','Добавьте микрозелень в конце и включите блендер ещё на 5 секунд.','Подавайте сразу.'],
+         tip:'Не процеживайте — клетчатка в микрозелени и есть главная ценность.' },
+    en:{ name:'“Green charge” smoothie', ing:['1 handful microgreens','1 banana','1 green apple','200 ml water or plant milk','1 tsp honey'],
+         steps:['Blend everything for 40 seconds.','Add the microgreens last and pulse for 5 more seconds.','Serve immediately.'],
+         tip:'Do not strain — the fibre in microgreens is the main benefit.' } },
+
+  { emoji:'🥑', time:{ru:'7 мин',en:'7 min'}, kcal:'320',
+    ru:{ name:'Тост с авокадо и редисом', ing:['2 ломтика цельнозернового хлеба','1 авокадо','1 горсть редиса','Сок лимона','Соль, перец, семена кунжута'],
+         steps:['Подсушите хлеб в тостере.','Разомните авокадо с лимоном, солью и перцем.','Намажьте на тосты, сверху выложите микрозелень редиса и кунжут.'],
+         tip:'Редис добавляйте прямо перед подачей — он даёт контраст хруста и остроты.' },
+    en:{ name:'Avocado toast with radish microgreens', ing:['2 slices wholegrain bread','1 avocado','1 handful radish microgreens','Lemon juice','Salt, pepper, sesame seeds'],
+         steps:['Toast the bread.','Mash the avocado with lemon juice, salt and pepper.','Spread on the toast, top with radish microgreens and sesame seeds.'],
+         tip:'Add the radish right before serving — it gives a contrast of crunch and heat.' } },
+
+  { emoji:'🥗', time:{ru:'10 мин',en:'10 min'}, kcal:'210',
+    ru:{ name:'Салат с горохом и фетой', ing:['100 г гороха','100 г феты','1 огурец','Горсть помидоров черри','Оливковое масло, лимон','Соль, перец'],
+         steps:['Нарежьте огурец и черри.','Разломайте фету крупными кусками.','Смешайте овощи, добавьте горох и заправьте маслом с лимоном.'],
+         tip:'Горох — самая сладкая микрозелень, поэтому он заменяет в салате сахар.' },
+    en:{ name:'Pea shoot and feta salad', ing:['100 g pea shoots','100 g feta','1 cucumber','A handful of cherry tomatoes','Olive oil, lemon','Salt, pepper'],
+         steps:['Chop the cucumber and cherry tomatoes.','Break the feta into large pieces.','Toss the vegetables, add pea shoots and dress with oil and lemon.'],
+         tip:'Pea shoots are the sweetest microgreen, so they replace sugar in the salad.' } },
+
+  { emoji:'🍝', time:{ru:'15 мин',en:'15 min'}, kcal:'420',
+    ru:{ name:'Паста с базиликом и подсолнечником', ing:['200 г пасты','2 горсти базилика и подсолнечника','2 ст. л. оливкового масла','30 г пармезана','Чеснок, соль, перец'],
+         steps:['Отварите пасту аль денте.','Смешайте масло, чеснок и пармезан с горячей пастой.','Снимите с огня, добавьте микрозелень и перемешайте.'],
+         tip:'Микрозелень добавляют только после снятия с огня — иначе она потеряет аромат.' },
+    en:{ name:'Pasta with basil and sunflower microgreens', ing:['200 g pasta','2 handfuls basil and sunflower microgreens','2 tbsp olive oil','30 g parmesan','Garlic, salt, pepper'],
+         steps:['Cook the pasta al dente.','Toss the hot pasta with oil, garlic and parmesan.','Remove from the heat, add the microgreens and stir.'],
+         tip:'Add microgreens only after removing from the heat — otherwise they lose their aroma.' } },
+
+  { emoji:'🍳', time:{ru:'10 мин',en:'10 min'}, kcal:'290',
+    ru:{ name:'Омлет с рукколой и крессом', ing:['3 яйца','2 ст. л. молока','1 горсть рукколы','1 горсть кресса','10 г сливочного масла','Соль, перец'],
+         steps:['Взбейте яйца с молоком и солью.','Обжарьте на масле до почти готовности.','Снимите с огня, добавьте микрозелень, сложите пополам и накройте на минуту.'],
+         tip:'Кресс даёт остроту — если не любите, замените его на горох.' },
+    en:{ name:'Omelette with arugula and cress', ing:['3 eggs','2 tbsp milk','1 handful arugula microgreens','1 handful cress','10 g butter','Salt, pepper'],
+         steps:['Whisk the eggs with milk and salt.','Cook in butter until almost set.','Remove from the heat, add the microgreens, fold and cover for a minute.'],
+         tip:'Cress brings heat — if you prefer less, swap it for pea shoots.' } }
+];
+
+/* =============================================================
+   5. БЛОГ
+   ============================================================= */
+const POSTS = [
+  { emoji:'🌿', read:'6 мин',
+    ru:{ t:'Чем живая микрозелень отличается от срезанной',
+      lead:'Срезанная зелень начинает увядать через несколько часов: точка роста повреждена, и растение больше не может восполнять влагу. Живой бокс продолжает расти — поэтому остаётся свежим до двух недель.',
+      points:['Что происходит с растением после срезки и почему оно вянет','Почему живой бокс выгоднее по цене за грамм съеденной зелени','Как срезать правильно, чтобы зелень отрастала снова','В каких случаях срезанная зелень всё-таки удобнее'],
+      k:'живая микрозелень, срезанная зелень, хранение микрозелени' },
+    en:{ t:'Live vs cut microgreens',
+      lead:'Cut greens start to wilt within hours: the growing point is damaged and the plant can no longer replenish moisture. A live box keeps growing — that is why it stays fresh for up to two weeks.',
+      points:['What happens to a plant after cutting and why it wilts','Why a live box is cheaper per gram of greens actually eaten','How to cut properly so the greens regrow','When cut greens are still more convenient'],
+      k:'live microgreens, cut greens, microgreens storage' } },
+
+  { emoji:'🥦', read:'7 мин',
+    ru:{ t:'Польза микрозелени: что реально подтверждено',
+      lead:'В 5–7-дневном ростке концентрация витаминов и антиоксидантов выше, чем во взрослом растении, — это подтверждают исследования состава. Но микрозелень не заменяет полноценный рацион, а дополняет его.',
+      points:['Витамины C, K, A и фолаты — где их больше всего среди 12 культур','Антиоксиданты и сульфорафан: что известно науке','Сколько микрозелени нужно есть в день','Кому стоит быть внимательным (щитовидная железа, аллергии)'],
+      k:'польза микрозелени, витамины в микрозелени, антиоксиданты' },
+    en:{ t:'Microgreens benefits: what is actually proven',
+      lead:'A 5–7-day shoot has a higher concentration of vitamins and antioxidants than a mature plant — this is supported by composition studies. But microgreens do not replace a full diet; they complement it.',
+      points:['Vitamins C, K, A and folate — which of the 12 varieties have the most','Antioxidants and sulforaphane: what science knows','How much microgreens to eat per day','Who should be careful (thyroid, allergies)'],
+      k:'microgreens benefits, vitamins in microgreens, antioxidants' } },
+
+  { emoji:'🧊', read:'5 мин',
+    ru:{ t:'Как ухаживать за живым боксом: инструкция',
+      lead:'Живой бокс — это мини-огород на подоконнике. Ему нужны свет, умеренный полив и регулярная срезка. Ничего сложного, но три ошибки встречаются чаще всего.',
+      points:['Свет: сколько нужно и что делать зимой','Полив: как понять, что пора, и как не залить','Срезка: на какой высоте и как часто','Три главные ошибки, из-за которых зелень погибает'],
+      k:'уход за микрозеленью, живой бокс, полив микрозелени' },
+    en:{ t:'How to care for a live box: a guide',
+      lead:'A live box is a mini garden on your windowsill. It needs light, moderate watering and regular cutting. Nothing complicated, but three mistakes happen most often.',
+      points:['Light: how much is needed and what to do in winter','Watering: how to tell it is time and how not to overwater','Cutting: at what height and how often','The three main mistakes that kill the greens'],
+      k:'microgreens care, live box, watering microgreens' } },
+
+  { emoji:'💰', read:'6 мин',
+    ru:{ t:'Сколько стоит микрозелень на самом деле',
+      lead:'Разбираем экономику: почему 150 ₽ за живой бокс выгоднее, чем кажется, и сколько зелени реально получается с одного бокса за две недели. Без скидок и скрытых доплат.',
+      points:['Сколько грамм зелени даёт один бокс за две недели','Цена за 100 г в пересчёте на срезанную зелень','Почему единая цена 150 ₽ — это честно','Сравнение с пучком зелени из магазина'],
+      k:'цена микрозелени, сколько стоит микрозелень' },
+    en:{ t:'What microgreens actually cost',
+      lead:'Let us do the economics: why 150 ₽ for a live box is cheaper than it looks, and how much greens one box really yields over two weeks. No discounts or hidden fees.',
+      points:['How many grams one box yields over two weeks','Price per 100 g compared to cut greens','Why a flat price of 150 ₽ is fair','Comparison with a supermarket bunch'],
+      k:'microgreens price, cost of microgreens' } },
+
+  { emoji:'🧒', read:'5 мин',
+    ru:{ t:'Микрозелень в рационе детей',
+      lead:'Дети едят зелень охотнее, если она выглядит интересно и её можно сорвать самому. Живой бокс превращает приём пищи в маленький ритуал — и снимает вопрос «не хочу зелень».',
+      points:['С какого возраста можно предлагать микрозелень','Какие культуры самые мягкие по вкусу','Как вовлечь ребёнка: полив и срезка','Порции и меры предосторожности'],
+      k:'микрозелень для детей, детское питание, микрозелень детям' },
+    en:{ t:'Microgreens in children’s diets',
+      lead:'Children eat greens more willingly when they look interesting and can be picked by hand. A live box turns a meal into a small ritual — and removes the “I do not want greens” argument.',
+      points:['At what age you can offer microgreens','Which varieties are the mildest in taste','How to involve a child: watering and cutting','Portions and precautions'],
+      k:'microgreens for kids, children nutrition, microgreens for children' } },
+
+  { emoji:'🍽️', read:'7 мин',
+    ru:{ t:'Микрозелень на кухне: 10 идей применения',
+      lead:'Микрозелень — не только украшение. Она меняет вкус блюда: редис даёт остроту, горох — сладость, базилик — аромат. Собрали десять способов, куда её добавить, кроме салата.',
+      points:['Завтраки: тосты, омлеты, сырники','Горячее: паста, супы, пицца — когда добавлять','Напитки: смузи и лимонады','Соусы: песто, йогуртовые заправки, масло с зеленью'],
+      k:'микрозелень рецепты, куда добавить микрозелень, блюда с микрозеленью' },
+    en:{ t:'Microgreens in the kitchen: 10 ideas',
+      lead:'Microgreens are not just a garnish. They change the taste of a dish: radish adds heat, pea adds sweetness, basil adds aroma. Here are ten ways to use them beyond salad.',
+      points:['Breakfast: toasts, omelettes, syrniki','Hot dishes: pasta, soups, pizza — when to add','Drinks: smoothies and lemonades','Sauces: pesto, yoghurt dressings, herb oil'],
+      k:'microgreens recipes, how to use microgreens, microgreens dishes' } },
+
+  { emoji:'⚠️', read:'5 мин',
+    ru:{ t:'5 ошибок при покупке микрозелени',
+      lead:'Даже свежая на вид зелень может оказаться неживой или переросшей. Пять простых признаков помогут выбрать бокс, который действительно будет расти и радовать вкусом.',
+      points:['Жёлтые и поникшие листья — что это значит','Мокрый субстрат: признак перелива или неправильного хранения','Слишком длинные стебли: переросшая зелень','Плесень на поверхности субстрата','Как проверить свежесть при получении'],
+      k:'как выбрать микрозелень, качество микрозелени, свежая микрозелень' },
+    en:{ t:'5 mistakes when buying microgreens',
+      lead:'Even greens that look fresh can turn out to be dead or overgrown. Five simple signs will help you pick a box that will actually grow and taste great.',
+      points:['Yellow and drooping leaves — what they mean','Wet substrate: a sign of overwatering or poor storage','Too-long stems: overgrown greens','Mould on the substrate surface','How to check freshness on delivery'],
+      k:'how to choose microgreens, microgreens quality, fresh microgreens' } },
+
+  { emoji:'📦', read:'6 мин',
+    ru:{ t:'Оптовые заказы: как заказать много микрозелени',
+      lead:'Оптовый заказ — это не про скидки, а про удобство: вы получаете любое количество боксов по единой цене 150 ₽ и бесплатную доставку от 3 боксов. Разбираем, как это работает.',
+      points:['Единая цена 150 ₽ за любой бокс — без скидок и условий','Как смешивать культуры в одном заказе','Бесплатная доставка от 3 боксов по всем районам Кургана','Для юридических лиц — счёт и документы'],
+      k:'оптовые заказы микрозелени, купить много микрозелени, микрозелень для кафе' },
+    en:{ t:'Wholesale orders: how to buy microgreens in bulk',
+      lead:'A wholesale order is not about discounts, but about convenience: you get any number of boxes at a flat price of 150 ₽ and free delivery from 3 boxes. Here is how it works.',
+      points:['One price of 150 ₽ per box — no discounts or conditions','How to mix varieties in one order','Free delivery from 3 boxes across all districts of Kurgan','For companies — invoice and documents'],
+      k:'wholesale microgreens, buy microgreens in bulk, microgreens for cafés' } }
+];
+
+/* =============================================================
+   6. FAQ
+   ============================================================= */
+const FAQ = [
+  { ru:{ q:'Как заказать микрозелень?', a:'Напишите нам в Telegram или Max. Укажите культуры и количество боксов. Мы подтвердим заказ и договоримся о доставке.' },
+    en:{ q:'How do I order microgreens?', a:'Message us in Telegram or Max. Tell us the varieties and number of boxes. We will confirm the order and arrange delivery.' } },
+  { ru:{ q:'Сколько стоит микрозелень?', a:'150 ₽ за бокс. Скидок нет — единая цена. Доставка бесплатно от 3 боксов по всем районам Кургана.' },
+    en:{ q:'How much do microgreens cost?', a:'150 ₽ per box. No discounts — one price. Free delivery from 3 boxes across all districts of Kurgan.' } },
+  { ru:{ q:'Есть ли оптовые условия?', a:'Да, можно заказать любое количество боксов по единой цене 150 ₽. Доставка бесплатно от 3 боксов. Культуры можно смешивать. Для юрлиц — счёт и документы.' },
+    en:{ q:'Do you have wholesale terms?', a:'Yes, you can order any number of boxes at a flat price of 150 ₽. Free delivery from 3 boxes. Varieties can be mixed. For companies — invoice and documents.' } },
+  { ru:{ q:'Можно ли забрать самому?', a:'Да, самовывоз возможен по договорённости. Адрес сообщим в Telegram или Max — на сайте его нет.' },
+    en:{ q:'Can I pick up myself?', a:'Yes, pickup is possible by arrangement. We will share the address in Telegram or Max — it is not on the website.' } },
+  { ru:{ q:'Как оплатить заказ?', a:'Переводом на карту или по СБП. Детали оплаты обсуждаются в мессенджере.' },
+    en:{ q:'How do I pay?', a:'By card transfer or SBP. Payment details are discussed in the messenger.' } },
+  { ru:{ q:'Сколько живёт бокс?', a:'До 14 дней при правильном уходе: светлое место, полив каждые 2–3 дня, срезка по мере необходимости. Подробная инструкция — в разделе «Уход».' },
+    en:{ q:'How long does a box live?', a:'Up to 14 days with proper care: a bright spot, watering every 2–3 days, cutting as needed. See the “Care” section for details.' } },
+  { ru:{ q:'Чем живая микрозелень отличается от срезанной?', a:'Живой бокс продолжает расти и остаётся свежим до двух недель. Срезанная зелень вянет за несколько часов и требует холодильника.' },
+    en:{ q:'How are live microgreens different from cut ones?', a:'A live box keeps growing and stays fresh for up to two weeks. Cut greens wilt within hours and need refrigeration.' } },
+  { ru:{ q:'Что делать, если зелень испортилась?', a:'Напишите нам в Telegram или Max с фото — решим вопрос индивидуально: заменим бокс или вернём деньги.' },
+    en:{ q:'What if the greens spoil?', a:'Message us in Telegram or Max with a photo — we will resolve it individually: replace the box or refund you.' } }
+];
+
+/* =============================================================
+   7. СЦЕНАРИИ ЧАТ-БОТА
+   ============================================================= */
+const CHAT_SCENARIOS = [
+  { id:'order', labelKey:'chat.topic.order',
+    kw:['заказ','заказать','купить','оформ','хочу','как взять','order','buy','how to order'],
+    ru:{ q:'Как заказать микрозелень?', a:'Напишите нам в Telegram или Max. Укажите культуры и количество боксов — мы подтвердим заказ и договоримся о доставке.' },
+    en:{ q:'How do I order microgreens?', a:'Message us in Telegram or Max. Tell us the varieties and number of boxes — we will confirm the order and arrange delivery.' } },
+
+  { id:'price', labelKey:'chat.topic.price',
+    kw:['цена','стоимость','сколько стоит','почём','price','cost','how much'],
+    ru:{ q:'Сколько стоит микрозелень?', a:'150 ₽ за бокс. Скидок нет — единая цена. Доставка бесплатно от 3 боксов по всем районам Кургана.' },
+    en:{ q:'How much do microgreens cost?', a:'150 ₽ per box. No discounts — one price. Free delivery from 3 boxes across all districts of Kurgan.' } },
+
+  { id:'wholesale', labelKey:'chat.topic.wholesale',
+    kw:['опт','оптов','много','большой заказ','юрлицо','счет','wholesale','bulk','large order'],
+    ru:{ q:'Расскажите про опт', a:'Оптовые заказы — это любое количество боксов по единой цене 150 ₽. Доставка бесплатно от 3 боксов. Культуры можно смешивать. Для юрлиц — счёт и документы. Подробности — в разделе «Опт».' },
+    en:{ q:'Tell me about wholesale', a:'Wholesale orders mean any number of boxes at a flat price of 150 ₽. Free delivery from 3 boxes. Varieties can be mixed. For companies — invoice and documents. See the “Wholesale” page for details.' } },
+
+  { id:'delivery', labelKey:'chat.topic.delivery',
+    kw:['доставка','привез','курьер','район','когда привез','delivery','shipping','courier'],
+    ru:{ q:'Как работает доставка?', a:'Бесплатно от 3 боксов по всем районам Кургана. Меньше 3 боксов — обсуждается индивидуально. Точное время согласуем в мессенджере.' },
+    en:{ q:'How does delivery work?', a:'Free from 3 boxes across all districts of Kurgan. Fewer than 3 boxes — discussed individually. We agree on the exact time in the messenger.' } },
+
+  { id:'payment', labelKey:'chat.topic.payment',
+    kw:['оплат','оплатить','карт','сбп','перев','налич','payment','pay','card','transfer'],
+    ru:{ q:'Как оплатить заказ?', a:'Переводом на карту или по СБП. Реквизиты пришлём в Telegram или Max после подтверждения заказа.' },
+    en:{ q:'How do I pay?', a:'By card transfer or SBP. We will send the details in Telegram or Max after confirming the order.' } },
+
+  { id:'pickup', labelKey:'chat.topic.pickup',
+    kw:['самовывоз','забрать','сам','адрес','где находитесь','pickup','address','where'],
+    ru:{ q:'Можно забрать самому?', a:'Да, самовывоз по договорённости. Адрес сообщим в Telegram или Max — на сайте его нет.' },
+    en:{ q:'Can I pick up myself?', a:'Yes, pickup by arrangement. We will share the address in Telegram or Max — it is not on the website.' } },
+
+  { id:'care', labelKey:'chat.topic.care',
+    kw:['уход','полив','поливать','свет','подоконник','как ухаживать','care','water','light','grow'],
+    ru:{ q:'Как ухаживать за боксом?', a:'Поставьте на светлое место, поливайте каждые 2–3 дня небольшим количеством воды, срезайте ростки по мере необходимости. Не храните в холодильнике.' },
+    en:{ q:'How do I care for the box?', a:'Place it in a bright spot, water every 2–3 days with a small amount, cut the shoots as needed. Do not keep it in the fridge.' } },
+
+  { id:'shelf', labelKey:'chat.topic.shelf',
+    kw:['срок','сколько хран','сколько живёт','свежесть','портится','shelf','how long','fresh','spoil'],
+    ru:{ q:'Сколько живёт бокс?', a:'До 14 дней при правильном уходе. Живая зелень продолжает расти, поэтому не вянет, как срезанная.' },
+    en:{ q:'How long does a box live?', a:'Up to 14 days with proper care. Live greens keep growing, so they do not wilt like cut ones.' } },
+
+  { id:'quality', labelKey:'chat.topic.quality',
+    kw:['качество','испорт','брак','возврат','плесен','претенз','quality','refund','return','mould'],
+    ru:{ q:'А если зелень испортилась?', a:'Напишите нам в Telegram или Max с фото — решим вопрос индивидуально: заменим бокс или вернём деньги.' },
+    en:{ q:'What if the greens spoil?', a:'Message us in Telegram or Max with a photo — we will resolve it individually: replace the box or refund you.' } },
+
+  { id:'assortment', labelKey:'chat.topic.assortment',
+    kw:['какие культуры','ассортимент','что есть','список','какие есть','varieties','assortment','what do you have','list'],
+    ru:{ q:'Какие культуры есть?', a:'12 культур: подсолнечник, горох, редис, руккола, кресс-салат, салат, щавель, базилик, капуста, горчица, петрушка, кинза. Все по 150 ₽ за бокс.' },
+    en:{ q:'Which varieties do you have?', a:'12 varieties: sunflower, pea, radish, arugula, cress, lettuce, sorrel, basil, cabbage, mustard, parsley, coriander. All 150 ₽ per box.' } },
+
+  { id:'contact', labelKey:'chat.topic.contact',
+    kw:['связ','телеграм','макс','оператор','написать','contact','telegram','max','operator'],
+    ru:{ q:'Как с вами связаться?', a:'Telegram: t.me/Mikrosad45, Max: по ссылке в разделе «Контакты». Телефона нет — все вопросы решаем в мессенджерах.' },
+    en:{ q:'How can I contact you?', a:'Telegram: t.me/Mikrosad45, Max: via the link on the “Contacts” page. There is no phone — we handle everything in messengers.' } }
+];
+
+/* =============================================================
+   8. РЕНДЕРИНГ
+   ============================================================= */
+const money = (n) => n.toLocaleString(lang === 'ru' ? 'ru-RU' : 'en-US') + ' ₽';
+
+function productCard(p) {
+  const d = p[lang] || p.ru;
+  return `
+  <article class="card product reveal" data-id="${p.id}" data-color="${p.color}">
+    <div class="product__ph">
+      <img src="${p.img}" alt="${d.name}" loading="lazy">
+    </div>
+    <h3>${d.name}</h3>
+    <p class="desc">${d.desc}</p>
+    <p class="price-tag">${money(PRICE)}</p>
+    <div class="product__actions">
+      <a class="btn btn--sm btn--tg" href="${TG_URL}" target="_blank" rel="noopener">${t('catalog.order.tg')}</a>
+      <a class="btn btn--sm btn--max" href="${MAX_URL}" target="_blank" rel="noopener">${t('catalog.order.max')}</a>
+    </div>
+  </article>`;
+}
+
+function renderCatalog() {
+  const home = document.getElementById('homeCatalog');
+  const full = document.getElementById('catalogGrid');
+  if (home) home.innerHTML = PRODUCTS.slice(0, 4).map(productCard).join('');
+  if (full) full.innerHTML = PRODUCTS.map(productCard).join('');
+
+  const table = document.getElementById('catalogTable');
+  if (table) {
+    table.innerHTML = PRODUCTS.map(p => {
+      const d = p[lang] || p.ru;
+      return `<tr>
+        <th scope="row" style="background:transparent;font-weight:700">${d.name}</th>
+        <td>${money(PRICE)}</td>
+        <td>${lang === 'ru' ? 'бесплатно от 3 боксов' : 'free from 3 boxes'}</td>
+      </tr>`;
+    }).join('');
+  }
+}
+
+function renderFilters() {
+  const container = document.getElementById('catalogFilters');
+  if (!container) return;
+
+  const tastes = [
+    { id: 'all', label: t('catalog.filter.all') },
+    { id: 'spicy', label: t('catalog.filter.spicy') },
+    { id: 'sweet', label: t('catalog.filter.sweet') },
+    { id: 'aromatic', label: t('catalog.filter.aromatic') },
+    { id: 'neutral', label: t('catalog.filter.neutral') }
+  ];
+
+  container.innerHTML = tastes.map(taste =>
+    `<button class="filter-btn ${taste.id === 'all' ? 'is-active' : ''}" data-filter="${taste.id}">${taste.label}</button>`
+  ).join('');
+
+  container.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      container.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
+      e.currentTarget.classList.add('is-active');
+      
+      const filter = e.currentTarget.getAttribute('data-filter');
+      const cards = document.querySelectorAll('#catalogGrid .product');
+      
+      cards.forEach(card => {
+        const id = card.getAttribute('data-id');
+        const product = PRODUCTS.find(p => p.id === id);
+        if (filter === 'all' || product.taste === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+function renderPairingGuide() {
+  const container = document.getElementById('pairingGuide');
+  if (!container) return;
+
+  container.innerHTML = PRODUCTS.map(p => {
+    const d = p[lang] || p.ru;
+    return `
+      <div class="pairing-card">
+        <h4>${d.name}</h4>
+        <p>${d.pairing}</p>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderStorageTable() {
+  const tb = document.getElementById('storageTable');
+  if (!tb) return;
+  tb.innerHTML = STORAGE_ROWS.map(r => {
+    const c = r[lang] || r.ru;
+    return `<tr>${c.map((cell, i) => i === 0
+      ? `<th scope="row" style="background:transparent;font-weight:700">${cell}</th>`
+      : `<td>${cell}</td>`).join('')}</tr>`;
+  }).join('');
+}
+
+function renderRecipes() {
+  const box = document.getElementById('recipesGrid');
+  if (!box) return;
+  box.innerHTML = RECIPES.map(r => {
+    const d = r[lang] || r.ru;
+    return `<article class="card reveal">
+      <div class="recipe__ph" role="img" aria-label="${d.name}">${r.emoji}</div>
+      <h3>${d.name}</h3>
+      <p class="meta"><span>⏱ ${t('recipes.time')}: ${r.time[lang]}</span><span>🔥 ${t('recipes.kcal')}: ${r.kcal} kcal</span></p>
+      <p><b>${t('recipes.ing')}</b></p>
+      <ul class="mini">${d.ing.map(i => `<li>${i}</li>`).join('')}</ul>
+      <p><b>${t('recipes.steps')}</b></p>
+      <ol class="mini">${d.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+      <p class="small muted"><b>${t('recipes.tip')}:</b> ${d.tip}</p>
+    </article>`;
+  }).join('');
+}
+
+function renderBlog() {
+  const box = document.getElementById('blogGrid');
+  if (!box) return;
+  box.innerHTML = POSTS.map(p => {
+    const d = p[lang] || p.ru;
+    return `<article class="card post reveal">
+      <div class="post__ph" role="img" aria-label="${d.t}">${p.emoji}</div>
+      <p class="meta"><span>${t('blog.read')}: ${p.read}</span></p>
+      <h3>${d.t}</h3>
+      <p class="lead">${d.lead}</p>
+      <p><b>${t('blog.about')}</b></p>
+      <ul class="points">${d.points.map(pt => `<li>${pt}</li>`).join('')}</ul>
+      <p class="keys"><b>${t('blog.keys')}:</b> ${d.k}</p>
+    </article>`;
+  }).join('');
+}
+
+function renderFaq() {
+  const box = document.getElementById('faqList');
+  if (!box) return;
+  box.innerHTML = FAQ.map(f => {
+    const d = f[lang] || f.ru;
+    return `<details>
+      <summary>${d.q}</summary>
+      <div class="details__body">${d.a}</div>
+    </details>`;
+  }).join('');
+}
+
+function renderMarquee() {
+  const track = document.getElementById('marqueeTrack');
+  if (!track) return;
+  const items = [t('marquee.1'), t('marquee.2'), t('marquee.3'), t('marquee.4'), t('marquee.5')];
+  const chunk = items.map(x => `<span><span class="dot"></span>${x}</span>`).join('');
+  track.innerHTML = chunk + chunk;
+}
+
+/* =============================================================
+   9. ЧАТ-БОТ
+   ============================================================= */
+const chatLog = () => document.getElementById('chatLog');
+
+function chatScroll() {
+  const log = chatLog();
+  if (log) log.scrollTop = log.scrollHeight;
+}
+
+function chatMsg(text, who) {
+  const log = chatLog();
+  if (!log) return null;
+  const div = document.createElement('div');
+  div.className = 'msg msg--' + who;
+  div.textContent = text;
+  log.appendChild(div);
+  chatScroll();
+  return div;
+}
+
+function botTyping() {
+  const log = chatLog();
+  if (!log) return;
+  const div = document.createElement('div');
+  div.className = 'msg msg--bot msg--typing';
+  div.textContent = lang === 'ru' ? 'печатает' : 'typing';
+  log.appendChild(div);
+  chatScroll();
+  return div;
+}
+
+function botReply(text, delay = 480) {
+  const ph = botTyping();
+  setTimeout(() => {
+    if (ph && ph.parentNode) ph.parentNode.removeChild(ph);
+    chatMsg(text, 'bot');
+  }, delay);
+}
+
+function renderChatTopics() {
+  const box = document.getElementById('chatTopics');
+  if (!box) return;
+  box.innerHTML = CHAT_SCENARIOS.map(s =>
+    `<button type="button" data-scenario="${s.id}">${t(s.labelKey)}</button>`).join('');
+}
+
+function findScenario(text) {
+  const s = ' ' + text.toLowerCase().replace(/ё/g, 'е') + ' ';
+  let best = null, bestLen = 0;
+  CHAT_SCENARIOS.forEach(sc => {
+    sc.kw.forEach(k => {
+      const key = k.toLowerCase().replace(/ё/g, 'е');
+      if (s.includes(key) && key.length > bestLen) { best = sc; bestLen = key.length; }
+    });
+  });
+  return best;
+}
+
+function chatAnswer(id, echoQuestion = true) {
+  const sc = CHAT_SCENARIOS.find(s => s.id === id);
+  if (!sc) return;
+  const d = sc[lang] || sc.ru;
+  if (echoQuestion) chatMsg(d.q, 'user');
+  botReply(d.a);
+}
+
+function chatFreeText(text) {
+  chatMsg(text, 'user');
+  const sc = findScenario(text);
+  if (sc) {
+    const d = sc[lang] || sc.ru;
+    botReply(d.a);
+  } else {
+    botReply(t('chat.fallback'));
+  }
+}
+
+function chatOperator() {
+  botReply(t('chat.escalate'), 350);
+}
+
+/* =============================================================
+   10. ЯЗЫК
+   ============================================================= */
+function applyLang(next) {
+  lang = next;
+  localStorage.setItem(LS.lang, lang);
+  document.documentElement.lang = lang;
+  document.documentElement.setAttribute('data-lang', lang);
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.textContent = t(el.getAttribute('data-i18n'));
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    el.setAttribute('placeholder', t(el.getAttribute('data-i18n-ph')));
+  });
+
+  document.querySelectorAll('[data-lang-btn]').forEach(b => {
+    b.setAttribute('aria-pressed', String(b.getAttribute('data-lang-btn') === lang));
+  });
+
+  document.title = lang === 'ru'
+    ? 'МикроСад45 — живая микрозелень в боксах, Курган. 150 ₽ за бокс'
+    : 'MicroSad45 — live microgreens in boxes, Kurgan. 150 ₽ per box';
+
+  renderCatalog();
+  renderFilters();
+  renderPairingGuide();
+  renderStorageTable();
+  renderRecipes();
+  renderBlog();
+  renderFaq();
+  renderChatTopics();
+  renderMarquee();
+  observeReveals();
+}
+
+/* =============================================================
+   11. РЕЖИМ ДЛЯ СЛАБОВИДЯЩИХ
+   ============================================================= */
+function applyA11y(on) {
+  document.body.classList.toggle('a11y', on);
+  const btn = document.getElementById('a11yToggle');
+  if (btn) btn.setAttribute('aria-pressed', String(on));
+  localStorage.setItem(LS.a11y, on ? '1' : '0');
+  if (on) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
+}
+
+/* =============================================================
+   12. РОУТИНГ
+   ============================================================= */
+const PAGES = ['home','catalog','wholesale','storage','recipes','blog','faq','contacts'];
+
+function route() {
+  let name = (location.hash || '#/home').replace(/^#\/?/, '').split('?')[0] || 'home';
+  if (!PAGES.includes(name)) name = 'home';
+
+  PAGES.forEach(p => {
+    const el = document.getElementById('page-' + p);
+    if (el) el.classList.toggle('is-active', p === name);
+  });
+
+  document.querySelectorAll('.site-nav a').forEach(a => {
+    const target = a.getAttribute('href').replace('#/', '');
+    if (target === name) a.setAttribute('aria-current', 'page');
+    else a.removeAttribute('aria-current');
+  });
+
+  const main = document.getElementById('main');
+  if (main) main.focus({ preventScroll: true });
+  window.scrollTo({ top: 0, behavior: 'auto' });
+  observeReveals();
+}
+
+/* =============================================================
+   13. АНИМАЦИИ И ЭФФЕКТЫ
+   ============================================================= */
+let revealObserver = null;
+
+function observeReveals() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  if (!revealObserver) {
+    revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const idx = el.dataset.revealIndex || 0;
+          setTimeout(() => el.classList.add('is-visible'), Number(idx) * 60);
+          revealObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }
+  document.querySelectorAll('.reveal:not(.is-visible)').forEach((el, i) => {
+    el.dataset.revealIndex = i % 8;
+    revealObserver.observe(el);
+  });
+}
+
+function initProgress() {
+  const bar = document.getElementById('progressBar');
+  const header = document.getElementById('siteHeader');
+  const onScroll = () => {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    const pct = max > 0 ? (doc.scrollTop / max) * 100 : 0;
+    if (bar) bar.style.width = pct + '%';
+    if (header) header.classList.toggle('scrolled', doc.scrollTop > 10);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
+function initCounters() {
+  const els = document.querySelectorAll('[data-counter]');
+  if (!els.length || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = Number(el.dataset.counter) || 0;
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const dur = 900;
+      const start = performance.now();
+      const step = (now) => {
+        const p = Math.min(1, (now - start) / dur);
+        const val = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        el.textContent = prefix + val + suffix;
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = prefix + target + suffix;
+      };
+      requestAnimationFrame(step);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+  els.forEach(el => io.observe(el));
+}
+
+/* =============================================================
+   14. ИНИЦИАЛИЗАЦИЯ
+   ============================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+
+  document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang-btn')));
+  });
+
+  const a11yBtn = document.getElementById('a11yToggle');
+  if (a11yBtn) a11yBtn.addEventListener('click', () => {
+    applyA11y(!document.body.classList.contains('a11y'));
+  });
+
+  /* --- Чат-бот --- */
+  const chatToggle = document.getElementById('chatToggle');
+  const chatPanel = document.getElementById('chatPanel');
+  const chatClose = document.getElementById('chatClose');
+  const chatForm = document.getElementById('chatForm');
+  const chatInput = document.getElementById('chatInput');
+
+  function openChat(open) {
+    chatPanel.classList.toggle('is-open', open);
+    chatToggle.setAttribute('aria-expanded', String(open));
+    if (open && !chatLog().dataset.init) {
+      chatLog().dataset.init = '1';
+      chatMsg(t('chat.greeting'), 'bot');
+    }
+    if (open) setTimeout(() => chatInput && chatInput.focus(), 60);
+  }
+
+  chatToggle.addEventListener('click', () => openChat(!chatPanel.classList.contains('is-open')));
+  chatClose.addEventListener('click', () => openChat(false));
+
+  document.getElementById('chatTopics').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-scenario]');
+    if (b) chatAnswer(b.getAttribute('data-scenario'));
+  });
+
+  chatForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const text = chatInput.value.trim();
+    if (!text) return;
+    chatInput.value = '';
+    chatFreeText(text);
+  });
+
+  document.getElementById('chatOperator').addEventListener('click', chatOperator);
+
+  /* --- Старт --- */
+  applyLang(lang);
+  applyA11y(localStorage.getItem(LS.a11y) === '1');
+  route();
+  window.addEventListener('hashchange', route);
+  initProgress();
+  initCounters();
+});
+</script>
+</body>
+</html>
